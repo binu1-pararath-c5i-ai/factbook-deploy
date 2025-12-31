@@ -1,0 +1,443 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "9b71390443fcbf402a0b",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 379.24158394307995,
+    "width": 1280.2585014991223,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_Dim_FB_CalDay"
+                    }
+                  },
+                  "Property": "DayDate"
+                }
+              },
+              "queryRef": "V_Dim_FB_CalDay.DayDate",
+              "nativeQueryRef": "DayDate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_FB_Financial_Management"
+                    }
+                  },
+                  "Property": "IsForecast"
+                }
+              },
+              "queryRef": "V_FB_Financial_Management.IsForecast",
+              "nativeQueryRef": "IsForecast"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Base_PL_Bar_PY"
+                }
+              },
+              "queryRef": "Measure Table.Base_PL_Bar_PY",
+              "nativeQueryRef": "Base_PL_Bar_PY"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Base PL FCST 39"
+                }
+              },
+              "queryRef": "Measure Table.Base PL FCST 39",
+              "nativeQueryRef": "Base PL FCST 39"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Base PL FCST 66"
+                }
+              },
+              "queryRef": "Measure Table.Base PL FCST 66",
+              "nativeQueryRef": "Base PL FCST 66"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Base PL FCST 93"
+                }
+              },
+              "queryRef": "Measure Table.Base PL FCST 93",
+              "nativeQueryRef": "Base PL FCST 93"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Base PL FCST Act"
+                }
+              },
+              "queryRef": "Measure Table.Base PL FCST Act",
+              "nativeQueryRef": "Base PL FCST Act"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "GP_Bar_FCST_new"
+                }
+              },
+              "queryRef": "Measure Table.GP_Bar_FCST_new",
+              "nativeQueryRef": "GP_Bar_FCST_new"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Volume_Bar_FCST_new"
+                }
+              },
+              "queryRef": "Measure Table.Volume_Bar_FCST_new",
+              "nativeQueryRef": "Volume_Bar_FCST_new"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Volume FCST Act"
+                }
+              },
+              "queryRef": "Measure Table.Volume FCST Act",
+              "nativeQueryRef": "Volume FCST Act"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "GP_Bar_Selected"
+                }
+              },
+              "queryRef": "Measure Table.GP_Bar_Selected",
+              "nativeQueryRef": "GP_Bar_Selected"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "GP_Bar_Selected graph"
+                }
+              },
+              "queryRef": "Measure Table.GP_Bar_Selected graph",
+              "nativeQueryRef": "GP_Bar_Selected graph"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "OI_Bar_Selected graph"
+                }
+              },
+              "queryRef": "Measure Table.OI_Bar_Selected graph",
+              "nativeQueryRef": "OI_Bar_Selected graph"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Base PL AOP"
+                }
+              },
+              "queryRef": "Measure Table.Base PL AOP",
+              "nativeQueryRef": "Base PL AOP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Base PL Act"
+                }
+              },
+              "queryRef": "Measure Table.Base PL Act",
+              "nativeQueryRef": "Base PL Act"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_CalDay"
+                  }
+                },
+                "Property": "DayDate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "93.95547600266092D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "V_Dim_FB_CalDay.DayDate"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.90643543706442D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Base_PL_Bar_PY"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.26747823100311D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Base PL FCST 39"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90.46820967863542D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Volume_Bar_FCST_new"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.66183300605957D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Volume FCST Act"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.55702256165205D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.GP_Bar_Selected graph"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.44792463657242D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.GP_Bar_Selected"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.92341081239681D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.OI_Bar_Selected graph"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.21363408230025D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Base PL FCST Act"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.95192590670939D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.GP_Bar_FCST_new"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.56503147610456D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Base PL Act"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "36.28612712842626D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "V_FB_Financial_Management.IsForecast"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "18337efe42ba068d6f1b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_CalDay"
+              }
+            },
+            "Property": "GE_CL_Y0"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "isHiddenInViewMode": true
+      }
+    ]
+  }
+}

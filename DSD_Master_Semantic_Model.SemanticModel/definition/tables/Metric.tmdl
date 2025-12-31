@@ -1,0 +1,146 @@
+table Metric
+	lineageTag: 53665f3e-eaa1-45ad-8a78-a2cbf1a5a084
+
+	calculationGroup
+		precedence: 1
+
+		calculationItem NONE = SELECTEDMEASURE()
+
+		calculationItem CMA_COMP_ACC =
+				
+				IF(SELECTEDVALUE(Operation_Cal_Day[Period Level Sort]) = 12.2,
+				    CALCULATE(
+				        AVERAGEX(VALUES(V_Fact_FB_CMAComplianceSummary[TimeGranularity]), SELECTEDMEASURE()),
+				        V_Fact_FB_CMAComplianceSummary[TimeGranularityNo] = -1
+				    ),
+				    CALCULATE(
+				        AVERAGEX(VALUES(V_Fact_FB_CMAComplianceSummary[Monthnumber]), SELECTEDMEASURE()),
+				        V_Fact_FB_CMAComplianceSummary[TimeGranularityNo] > 0
+				    )
+				)
+
+		calculationItem CMA_COMP_SKU = ```
+				
+				VAR _SelectedPeriod = [IM_Selected_Period]
+				VAR Avg_CMA = CALCULATE(
+						AVERAGEX(VALUES(V_Fact_FB_CMAComplianceSummary[Period]), SELECTEDMEASURE()
+					),
+					V_Fact_FB_CMAComplianceSummary[TimeGranularity] IN {"Monthly", "Current Week"}
+				)
+				VAR _SelectedKPI = 
+				SWITCH([PeriodLabel],
+					"W", CALCULATE(AVERAGEX(
+				        VALUES(V_Fact_FB_CMAComplianceSummary[TimeGranularity]), SELECTEDMEASURE()),
+						FILTER(ALL(Operation_Cal_Day), Operation_Cal_Day[WeekStarting_ISO]=_SelectedPeriod)
+				    ),
+					"M", CALCULATE(AVERAGEX(
+				        VALUES(V_Fact_FB_CMAComplianceSummary[TimeGranularity]), SELECTEDMEASURE()),
+						FILTER(ALL(Operation_Cal_Day), Operation_Cal_Day[FirstDayOfMonth] = _SelectedPeriod),
+						V_Fact_FB_CMAComplianceSummary[TimeGranularity] IN {"Monthly", "Current Week"}
+					),
+					"Q", CALCULATE(Avg_CMA,
+						FILTER(ALL(Operation_Cal_Day), Operation_Cal_Day[FirstDayOfQuarter] = _SelectedPeriod)
+					),
+					"Y", CALCULATE(Avg_CMA,
+						FILTER(ALL(Operation_Cal_Day), Operation_Cal_Day[FirstDayOfYear] = DATE(YEAR(_SelectedPeriod),
+								MONTH(_SelectedPeriod), DAY(_SelectedPeriod)))
+					)
+				)
+				RETURN _SelectedKPI
+				```
+
+		calculationItem PL_REV = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] IN {"Net Sales"})
+
+		calculationItem PL_GP =
+				
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    V_Dim_FB_PlHier[PlHier] = "Gross Profit",
+				    V_Dim_FB_Opex[OpexLine] = "Total COGS",
+				    KEEPFILTERS(
+				        FILTER(V_FB_Financial_Management, V_FB_Financial_Management[IsForecast] = "Y")
+				    )
+				) +
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    V_Dim_FB_PlHier[PlHier] = "Gross Profit",
+				    KEEPFILTERS(
+				        FILTER(V_FB_Financial_Management, V_FB_Financial_Management[IsForecast] = "N")
+				    )
+				)
+
+		calculationItem PL_VOL = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlSubHier] IN {"Franchise cases", "Contract cases"})
+
+		calculationItem PL_DSD_LABOR = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlHier] = "Total Operating Expense", V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_OPEX = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlHier] IN {"Total Operating Expense"})
+
+		calculationItem PL_OPEX_AO = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlHier] = "Total Operating Expense", V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_OPEX_SC = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlHier] = "Total Operating Expense", V_Dim_FB_Opex[OpexLine] IN {"A&P", "DSD-T&W", "SC-T&W", "SG&A"}, V_Dim_FB_Function[FnArea] in {"Z009","Z019"})
+
+		calculationItem PL_OPEX_AP = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlHier] = "Total Operating Expense", V_Dim_FB_Opex[OpexLine] IN {"A&P"}, NOT V_Dim_FB_Function[FnArea] in {"Z009","Z019"})
+
+		calculationItem PL_OPEX_OTH_INC = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlHier] IN {"Other Income (Expense)"})
+
+		calculationItem PL_OI =
+				
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    V_Dim_FB_PlHier[PlHier] IN {"Total Operating Expense", "Gross Profit", "Other Income (Expense)"},
+				    V_Dim_FB_Opex[OpexLine] IN {"Total COGS", "DSD-T&W"},
+				    KEEPFILTERS(
+				        FILTER(V_FB_Financial_Management, V_FB_Financial_Management[IsForecast] = "Y")
+				    )
+				) +
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    V_Dim_FB_PlHier[PlHier] IN {"Total Operating Expense", "Gross Profit", "Other Income (Expense)"},
+				    KEEPFILTERS(
+				        FILTER(V_FB_Financial_Management, V_FB_Financial_Management[IsForecast] = "N")
+				    )
+				)
+
+		calculationItem PL_SGA_FLEET = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] = "SG&A", V_Dim_FB_Company[CmpnyCode] = "1010", NOT V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_SGA_BLDG = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] = "SG&A", V_Dim_FB_Company[CmpnyCode] = "1000", NOT V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_SGA_LABOR = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] = "SG&A", V_Dim_FB_Company[CmpnyCode] IN {"1010", "1000"}, V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_SGA_NONLABOR = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] = "SG&A", V_Dim_FB_Company[CmpnyCode] IN {"1010", "1000"}, NOT V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_TW_FLEET = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] = "DSD-T&W", V_Dim_FB_Company[CmpnyCode] = "1010", NOT V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_TW_BLDG = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] = "DSD-T&W", V_Dim_FB_Company[CmpnyCode] = "1000", NOT V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_TW_LABOR = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_Opex[OpexLine] = "DSD-T&W", V_Dim_FB_Company[CmpnyCode] IN {"1010", "1000"}, V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem PL_NONLABOR_OPEX = CALCULATE(SELECTEDMEASURE(), V_Dim_FB_PlHier[PlHier] = "Total Operating Expense", NOT V_Dim_FB_PlHier[PlSubHier] IN {"Labor", "Benefits"}, NOT V_Dim_FB_Function[FnArea] IN {"Z009", "Z019"})
+
+		calculationItem BSO_AOP_FCST_YA =
+				
+				IF (SELECTEDVALUE('Metric Table'[Metrics]) <> "FCST", SELECTEDMEASURE(),
+				    IF(NOT [IsFullPeriod] && NOT [IsClosedQuarter],
+				        VAR FilteredMeasure = CALCULATE(SELECTEDMEASURE(), KEEPFILTERS(Operation_Cal_Day[DayDate] <= MAX(V_Dim_FB_Ref[CL_M_END])))
+				        RETURN IF(FilteredMeasure <> 0, FilteredMeasure)
+				    )
+				)
+
+	column Group
+		dataType: string
+		lineageTag: dd9f098e-e1e5-460a-a82a-98a349ed76c7
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: 332374d2-d297-49e1-af02-c806403115de
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

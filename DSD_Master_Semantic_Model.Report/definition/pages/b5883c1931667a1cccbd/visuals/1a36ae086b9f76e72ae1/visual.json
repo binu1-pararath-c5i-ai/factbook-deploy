@@ -1,0 +1,212 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "1a36ae086b9f76e72ae1",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 412.47015583212561,
+    "width": 722.12875946870656
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_Dim_FB_CalDay"
+                    }
+                  },
+                  "Property": "FirstDayOfMonth"
+                }
+              },
+              "queryRef": "V_Dim_FB_CalDay.FirstDayOfMonth",
+              "nativeQueryRef": "FirstDayOfMonth"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Total_CFR_Card"
+                }
+              },
+              "queryRef": "Measure Table.Total_CFR_Card",
+              "nativeQueryRef": "Total_CFR_Card"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Conditional_Revenue AttainmentSelected"
+                }
+              },
+              "queryRef": "Measure Table.Conditional_Revenue AttainmentSelected",
+              "nativeQueryRef": "Conditional_Revenue AttainmentSelected"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Revenue Varient AOP%"
+                }
+              },
+              "queryRef": "Measure Table.Revenue Varient AOP%",
+              "nativeQueryRef": "Revenue Varient AOP%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Revenue Act"
+                }
+              },
+              "queryRef": "Measure Table.Revenue Act",
+              "nativeQueryRef": "Revenue Act"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Revenue AOP"
+                }
+              },
+              "queryRef": "Measure Table.Revenue AOP",
+              "nativeQueryRef": "Revenue AOP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Conditional_Revenue AttainmentSelected max per CasesOrdered"
+                }
+              },
+              "queryRef": "Measure Table.Conditional_Revenue AttainmentSelected max per CasesOrdered",
+              "nativeQueryRef": "Conditional_Revenue AttainmentSelected max per CasesOrdered"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_CalDay"
+                  }
+                },
+                "Property": "FirstDayOfMonth"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.17217617866905D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Conditional_Revenue AttainmentSelected"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.76909570334672D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Conditional_Revenue AttainmentSelected max per CasesOrdered"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "51.42983074665679D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Revenue Varient AOP%"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.76052929643777D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "V_Dim_FB_CalDay.FirstDayOfMonth"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "49.81815689427084D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Total_CFR_Card"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

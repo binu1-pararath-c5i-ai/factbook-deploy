@@ -1,0 +1,279 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "c9810a07f8378cddd0e7",
+  "position": {
+    "x": 0,
+    "y": 339.79027823088035,
+    "z": 0,
+    "height": 380.51420670798962,
+    "width": 724.12235323359891
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "FirstDayOfMonth"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.FirstDayOfMonth",
+              "nativeQueryRef": "FirstDayOfMonth"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "POG_Comp"
+                }
+              },
+              "queryRef": "Measure Table.POG_Comp",
+              "nativeQueryRef": "POG_Comp"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "CMA_Dynamic_Compliance"
+                }
+              },
+              "queryRef": "Measure Table.CMA_Dynamic_Compliance",
+              "nativeQueryRef": "CMA_Dynamic_Compliance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Account_CMA_Compliance"
+                }
+              },
+              "queryRef": "Measure Table.Account_CMA_Compliance",
+              "nativeQueryRef": "Account_CMA_Compliance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "SKU_CMA_Compliance"
+                }
+              },
+              "queryRef": "Measure Table.SKU_CMA_Compliance",
+              "nativeQueryRef": "SKU_CMA_Compliance"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "%Sold"
+                }
+              },
+              "queryRef": "Measure Table.%Sold",
+              "nativeQueryRef": "%Sold"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "%Sold_Prior Period"
+                }
+              },
+              "queryRef": "Measure Table.%Sold_Prior Period",
+              "nativeQueryRef": "%Sold_Prior Period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "%Built"
+                }
+              },
+              "queryRef": "Measure Table.%Built",
+              "nativeQueryRef": "%Built"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "%Built_Prior Period"
+                }
+              },
+              "queryRef": "Measure Table.%Built_Prior Period",
+              "nativeQueryRef": "%Built_Prior Period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "%Sold_PP"
+                }
+              },
+              "queryRef": "Measure Table.%Sold_PP",
+              "nativeQueryRef": "%Sold_PP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "%Built_PP"
+                }
+              },
+              "queryRef": "Measure Table.%Built_PP",
+              "nativeQueryRef": "%Built_PP"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "89.98901471365977D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Operation_Cal_Day.FirstDayOfMonth"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "50.87485139273073D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.POG_Comp"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.2347695072731D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.CMA_Dynamic_Compliance"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "61.75004342622344D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Account_CMA_Compliance"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.95605559510143D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.SKU_CMA_Compliance"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.912063288955835D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.%Sold_Prior Period"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.945450534112446D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.%Built_Prior Period"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

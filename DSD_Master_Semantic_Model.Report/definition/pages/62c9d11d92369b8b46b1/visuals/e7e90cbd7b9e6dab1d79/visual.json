@@ -1,0 +1,605 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e7e90cbd7b9e6dab1d79",
+  "position": {
+    "x": 0,
+    "y": 234.78385478863149,
+    "z": 5000,
+    "height": 485.46453307857655,
+    "width": 1098.1036541676619,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "FirstDayOfMonth"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.FirstDayOfMonth",
+              "nativeQueryRef": "FirstDayOfMonth"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table"
+                }
+              },
+              "queryRef": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table",
+              "nativeQueryRef": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_final"
+                }
+              },
+              "queryRef": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_final",
+              "nativeQueryRef": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_final"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_UI"
+                }
+              },
+              "queryRef": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_UI",
+              "nativeQueryRef": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_UI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "TradeBreaklescence_Rate_Per_Case_Act_PY_Ops"
+                }
+              },
+              "queryRef": "Measure Table.TradeBreaklescence_Rate_Per_Case_Act_PY_Ops",
+              "nativeQueryRef": "TradeBreaklescence_Rate_Per_Case_Act_PY_Ops"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Obsolescence_Rate_Per_Case_Act_PY_Ops"
+                }
+              },
+              "queryRef": "Measure Table.Obsolescence_Rate_Per_Case_Act_PY_Ops",
+              "nativeQueryRef": "Obsolescence_Rate_Per_Case_Act_PY_Ops"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Shrinklescence_Rate_Per_Case_Act_PY_Ops"
+                }
+              },
+              "queryRef": "Measure Table.Shrinklescence_Rate_Per_Case_Act_PY_Ops",
+              "nativeQueryRef": "Shrinklescence_Rate_Per_Case_Act_PY_Ops"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "WhseBreaklescence_Rate_Per_Case_Act_PY_Ops"
+                }
+              },
+              "queryRef": "Measure Table.WhseBreaklescence_Rate_Per_Case_Act_PY_Ops",
+              "nativeQueryRef": "WhseBreaklescence_Rate_Per_Case_Act_PY_Ops"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Wh_Delv_Mech_CPH_Actuals_VolAdj_Selection_Ops_Bar"
+                }
+              },
+              "queryRef": "Measure Table.Wh_Delv_Mech_CPH_Actuals_VolAdj_Selection_Ops_Bar",
+              "nativeQueryRef": "Wh_Delv_Mech_CPH_Actuals_VolAdj_Selection_Ops_Bar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Bar"
+                }
+              },
+              "queryRef": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Bar",
+              "nativeQueryRef": "Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Bar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPC_Selection_Ops_Bar"
+                }
+              },
+              "queryRef": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPC_Selection_Ops_Bar",
+              "nativeQueryRef": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPC_Selection_Ops_Bar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Wh_Delv_Mech_CPC_Actuals_VolAdj_Selection_Ops_Bar"
+                }
+              },
+              "queryRef": "Measure Table.Wh_Delv_Mech_CPC_Actuals_VolAdj_Selection_Ops_Bar",
+              "nativeQueryRef": "Wh_Delv_Mech_CPC_Actuals_VolAdj_Selection_Ops_Bar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar"
+                }
+              },
+              "queryRef": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar",
+              "nativeQueryRef": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Cases_Per_Delivery_Change_vs_YA_CPH_matrix_LP"
+                }
+              },
+              "queryRef": "Measure Table.Cases_Per_Delivery_Change_vs_YA_CPH_matrix_LP",
+              "nativeQueryRef": "Cases_Per_Delivery_Change_vs_YA_CPH_matrix_LP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Cases_Per_Deliver_actuals_CPH_matrix_LP"
+                }
+              },
+              "queryRef": "Measure Table.Cases_Per_Deliver_actuals_CPH_matrix_LP",
+              "nativeQueryRef": "Cases_Per_Deliver_actuals_CPH_matrix_LP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Cases_Per_Deliver_actuals_PY_CPH_matrix_LP"
+                }
+              },
+              "queryRef": "Measure Table.Cases_Per_Deliver_actuals_PY_CPH_matrix_LP",
+              "nativeQueryRef": "Cases_Per_Deliver_actuals_PY_CPH_matrix_LP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_CC"
+                }
+              },
+              "queryRef": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_CC",
+              "nativeQueryRef": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_CC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Delv_CPH_Adj_Vol_PY_CPH"
+                }
+              },
+              "queryRef": "Measure Table.Delv_CPH_Adj_Vol_PY_CPH",
+              "nativeQueryRef": "Delv_CPH_Adj_Vol_PY_CPH"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Wh_CPH_Adj_Vol_PY_CPH"
+                }
+              },
+              "queryRef": "Measure Table.Wh_CPH_Adj_Vol_PY_CPH",
+              "nativeQueryRef": "Wh_CPH_Adj_Vol_PY_CPH"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Mech_CPH_Adj_Vol_PY_CPH"
+                }
+              },
+              "queryRef": "Measure Table.Mech_CPH_Adj_Vol_PY_CPH",
+              "nativeQueryRef": "Mech_CPH_Adj_Vol_PY_CPH"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Operation_Cal_Day"
+                  }
+                },
+                "Property": "FirstDayOfMonth"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.15606868789635D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Operation_Cal_Day.FirstDayOfMonth"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "67.78610623966118D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.48558808027781D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_final"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.38147313609772D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Table_UI"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "49.54749335189322D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.TradeBreaklescence_Rate_Per_Case_Act_PY_Ops"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "57.22974769995059D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Obsolescence_Rate_Per_Case_Act_PY_Ops"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "57.28180956588551D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Shrinklescence_Rate_Per_Case_Act_PY_Ops"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "51.08093560199231D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.WhseBreaklescence_Rate_Per_Case_Act_PY_Ops"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "56.49457309014235D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Wh_Delv_Mech_CPH_Actuals_VolAdj_Selection_Ops_Bar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.66039825016793D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Total_Breakage_Abs_RPC_Aops_FCST_YA_Attainment_Selection_Ops_Bar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.43028531410401D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Wh_Delv_Mech_CPC_Actuals_VolAdj_Selection_Ops_Bar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.22387398974534D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPC_Selection_Ops_Bar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "68.04336923728579D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.13778204053049D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Cases_Per_Delivery_Change_vs_YA_CPH_matrix_LP"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.10818486039838D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Cases_Per_Deliver_actuals_CPH_matrix_LP"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "52.294750483127444D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Cases_Per_Deliver_actuals_PY_CPH_matrix_LP"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.63813579599318D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_CC"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "74.31936377453403D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Delv_CPH_Adj_Vol_PY_CPH"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "74.26731983228643D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Wh_CPH_Adj_Vol_PY_CPH"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "75.37141781927765D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Mech_CPH_Adj_Vol_PY_CPH"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "1f1bd68e65b55cff5be4",
+  "position": {
+    "x": 0,
+    "y": 468.403187453486,
+    "z": 7000,
+    "height": 252.78902180029405,
+    "width": 554.64885371476282
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "FirstDayOfMonth"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.FirstDayOfMonth",
+              "nativeQueryRef": "FirstDayOfMonth"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Volume_TL"
+                }
+              },
+              "queryRef": "Measure Table.Volume_TL",
+              "nativeQueryRef": "Volume_TL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Volume_PY_TL"
+                }
+              },
+              "queryRef": "Measure Table.Volume_PY_TL",
+              "nativeQueryRef": "Volume_PY_TL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "1Y"
+                }
+              },
+              "queryRef": "Measure Table.1Y",
+              "nativeQueryRef": "1Y"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "2Y"
+                }
+              },
+              "queryRef": "Measure Table.2Y",
+              "nativeQueryRef": "2Y"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "3Y"
+                }
+              },
+              "queryRef": "Measure Table.3Y",
+              "nativeQueryRef": "3Y"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Rate_Per_Case_Bar_AOP_FCST_YA"
+                }
+              },
+              "queryRef": "Measure Table.Rate_Per_Case_Bar_AOP_FCST_YA",
+              "nativeQueryRef": "Rate_Per_Case_Bar_AOP_FCST_YA"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Operation_Cal_Day"
+                  }
+                },
+                "Property": "FirstDayOfMonth"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "56.57081387712314D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.3Y"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.5598278778382D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Volume_PY_TL"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "56.228325251678406D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.1Y"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.00549272651057D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.2Y"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "97.0891168790622D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Operation_Cal_Day.FirstDayOfMonth"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60.761574113786224D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Rate_Per_Case_Bar_AOP_FCST_YA"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

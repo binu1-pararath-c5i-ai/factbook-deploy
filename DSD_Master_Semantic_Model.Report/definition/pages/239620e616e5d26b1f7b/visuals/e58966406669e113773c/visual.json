@@ -1,0 +1,196 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e58966406669e113773c",
+  "position": {
+    "x": 31.793647002627178,
+    "y": 319.15930260329594,
+    "z": 1000,
+    "height": 379.07809887747794,
+    "width": 659.10675901600189,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "L1"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.L1",
+              "nativeQueryRef": "L1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "L2"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.L2",
+              "nativeQueryRef": "L2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "L3"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.L3",
+              "nativeQueryRef": "L3"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Requested_Deliveries_Prior_Period_abs"
+                }
+              },
+              "queryRef": "Measure Table.Requested_Deliveries_Prior_Period_abs",
+              "nativeQueryRef": "Requested_Deliveries_Prior_Period_abs"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Haulback_cases_table"
+                }
+              },
+              "queryRef": "Measure Table.Haulback_cases_table",
+              "nativeQueryRef": "Haulback_cases_table"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Haulback_cases_table_prior_period_abs"
+                }
+              },
+              "queryRef": "Measure Table.Haulback_cases_table_prior_period_abs",
+              "nativeQueryRef": "Haulback_cases_table_prior_period_abs"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Schedule_Adherence_Prior_Period_den"
+                }
+              },
+              "queryRef": "Measure Table.Schedule_Adherence_Prior_Period_den",
+              "nativeQueryRef": "Schedule_Adherence_Prior_Period_den"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Schedule_Adherence_Prior_Period_num"
+                }
+              },
+              "queryRef": "Measure Table.Schedule_Adherence_Prior_Period_num",
+              "nativeQueryRef": "Schedule_Adherence_Prior_Period_num"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.10407060404074D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Requested_Deliveries_Prior_Period_abs"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "82.89351448845204D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Haulback_cases_table_prior_period_abs"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.89351710215581D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Schedule_Adherence_Prior_Period_den"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.13726878412231D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Schedule_Adherence_Prior_Period_num"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

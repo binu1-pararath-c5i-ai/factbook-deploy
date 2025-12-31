@@ -1,0 +1,25 @@
+table 'Abs/RPC Table'
+	lineageTag: 5b2f3f89-84bd-403f-afbb-4d1a65f31989
+
+	measure Tooltip = "tooltip"
+		lineageTag: 967c33ea-d2b8-4128-b1a0-6ba4acbd294c
+
+	column Abs/RPC
+		dataType: string
+		lineageTag: bda878d7-4da4-4451-8cf8-f539a41a1f82
+		summarizeBy: none
+		sourceColumn: Abs/RPC
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Abs/RPC Table' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45Wckwqzs8pLUlVitWJVgoKcFaKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Abs/RPC" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Abs/RPC", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

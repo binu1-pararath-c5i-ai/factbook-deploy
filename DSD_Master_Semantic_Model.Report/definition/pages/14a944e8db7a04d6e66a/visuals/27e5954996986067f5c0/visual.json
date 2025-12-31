@@ -1,0 +1,226 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "27e5954996986067f5c0",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 6000,
+    "height": 339.79027823088035,
+    "width": 724.12235323359891
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "FirstDayOfMonth"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.FirstDayOfMonth",
+              "nativeQueryRef": "FirstDayOfMonth"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "POG_Comp_Prior Period"
+                }
+              },
+              "queryRef": "Measure Table.POG_Comp_Prior Period",
+              "nativeQueryRef": "POG_Comp_Prior Period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "T1_CMA_Prior Period"
+                }
+              },
+              "queryRef": "Measure Table.T1_CMA_Prior Period",
+              "nativeQueryRef": "T1_CMA_Prior Period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "T2_CMA_Prior Period"
+                }
+              },
+              "queryRef": "Measure Table.T2_CMA_Prior Period",
+              "nativeQueryRef": "T2_CMA_Prior Period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "T3_CMA_Prior Period"
+                }
+              },
+              "queryRef": "Measure Table.T3_CMA_Prior Period",
+              "nativeQueryRef": "T3_CMA_Prior Period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "SKU_CMA_Prior Period"
+                }
+              },
+              "queryRef": "Measure Table.SKU_CMA_Prior Period",
+              "nativeQueryRef": "SKU_CMA_Prior Period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "SKU_CMA_Selected Period"
+                }
+              },
+              "queryRef": "Measure Table.SKU_CMA_Selected Period",
+              "nativeQueryRef": "SKU_CMA_Selected Period"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Measure Table"
+                  }
+                },
+                "Property": "T1_CMA_Prior Period"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69.13813175310234D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.POG_Comp_Prior Period"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.40718267998109D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.T1_CMA_Prior Period"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "61.36172128053997D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.SKU_CMA_Prior Period"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58.989851006166035D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.T2_CMA_Prior Period"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "61.5325364475256D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.T3_CMA_Prior Period"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.18903127565883D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.SKU_CMA_Selected Period"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
