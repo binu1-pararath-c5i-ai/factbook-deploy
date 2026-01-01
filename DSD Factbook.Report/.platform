@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "DSD Factbook"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4e352e35-5643-483c-87c7-3b9136d7810f"
+  }
+}

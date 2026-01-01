@@ -3727,11 +3727,7 @@ table 'Measure Table'
 		displayFolder: Topline
 		lineageTag: d6b1a1bb-d29f-4e8e-9bee-dd4109aed7e2
 
-	measure Revenue_AOP_TL =
-			
-			IF(NOT [IsFiltered_NC_to_SG],
-			    SUM(V_Fact_FB_Topline_Budget_All[RevenueDeadNetBudget])
-			)
+	measure Revenue_AOP_TL = IF(NOT [IsFiltered_NC_to_SG], SUM(V_Fact_FB_Topline_Budget_All[RevenueDeadNetBudget]))
 		displayFolder: Topline
 		lineageTag: b989a16e-0768-44f7-8d98-885071a41b88
 
@@ -3749,7 +3745,7 @@ table 'Measure Table'
 
 	measure Volume_FCST_TL =
 			
-			IF ([IsFiltered_NC_to_SG], "", CALCULATE(SUM(V_Fact_FB_Topline_Budget_All[SalesCasesFC]),
+			IF (NOT [IsFiltered_NC_to_SG], CALCULATE(SUM(V_Fact_FB_Topline_Budget_All[SalesCasesFC]),
 				V_Fact_FB_Topline_Budget_All[ISFC] = TRUE()))
 		displayFolder: Topline
 		lineageTag: 302ab3ab-1d6e-402e-94bd-35aac8913f5a
@@ -3959,7 +3955,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Volume_Bar_Actual_TL = CALCULATE([Volume_TL], REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+	measure Volume_Bar_Actual_TL = CALCULATE([Volume_TL], REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: 8725d8cd-8f3c-4802-b127-2e00b692b3f0
 
@@ -3968,10 +3964,10 @@ table 'Measure Table'
 	measure Volume_Bar_AOP_FCST_YA =
 			CALCULATE(SWITCH(
 			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", CALCULATE([Volume_AOP_TL]),
-			    "FCST", CALCULATE([Volume_FCST_TL]),
-				"YA", [Volume_Bar_Act_YA]
-			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+			    "AOP", [Volume_AOP_TL],
+			    "FCST", [Volume_FCST_TL],
+				"YA", [Volume_Full_PY_TL]
+			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: 55855e16-87c9-4f28-b690-ae7e29e97a91
 
@@ -4021,7 +4017,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Revenue_Bar_Actual_TL = CALCULATE([Revenue_TL], REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+	measure Revenue_Bar_Actual_TL = CALCULATE([Revenue_TL], REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: 3c555a93-c8b5-4e6a-a9ef-f3505d50c753
 
@@ -4030,27 +4026,21 @@ table 'Measure Table'
 	measure Revenue_Bar_AOP_FCST_YA =
 			CALCULATE(SWITCH(
 			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", CALCULATE([Revenue_AOP_TL]),
-				"FCST", CALCULATE([Revenue_FCST_TL]),
-				"YA", CALCULATE([Revenue_TL], 'Time Intel'[Group] = "YA_LE_CD")
-			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+			    "AOP", [Revenue_AOP_TL],
+				"FCST", [Revenue_FCST_TL],
+				"YA", [Revenue_Full_PY_TL]
+			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: de85365d-e467-4719-9a8e-25fddebf602b
 
 		formatStringDefinition = CONVERT(CALCULATE([Revenue_Bar_AOP_FCST_YA], Formatter[Group] = "NUM_POS1"), STRING)
 
-	measure Rate_per_Case_Bar_Actual_TL = CALCULATE([Rate_per_Case_TL], REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+	measure Rate_per_Case_Bar_Actual_TL = CALCULATE([Rate_per_Case_TL], REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		displayFolder: Topline
 		lineageTag: 2580d8ba-a950-4f50-a832-3790d03f08d4
 
-	measure Rate_Per_Case_Bar_AOP_FCST_YA =
-			CALCULATE(SWITCH(
-				SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", [Rate_Per_Case_AOP_TL],
-				"FCST", [Rate_Per_Case_FCST_TL],
-				"YA", DIVIDE([Revenue_PY_TL], [Volume_PY_TL])
-			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+	measure Rate_Per_Case_Bar_AOP_FCST_YA = DIVIDE([Revenue_Bar_AOP_FCST_YA], [Volume_Bar_AOP_FCST_YA])
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		displayFolder: Topline
 		lineageTag: 47f3e9bb-bc46-48eb-ab25-f8d3c58b2e34
@@ -14147,14 +14137,14 @@ table 'Measure Table'
 	measure 'Volume_FCST Topline bar' =
 			CALCULATE(SWITCH(
 			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", [Quarter FCST dynamic volume Bar],
-			    "FCST", "",
-			    "YA", [Quarter FCST dynamic volume Bar]
-			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+			    "AOP", CALCULATE([Volume_AOP_TL], V_Dim_FB_CalDay[LE_CD]),
+			    "FCST", BLANK(),
+			    "YA", [Volume_PY_TL]
+			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: 68ca4353-2a63-4639-a890-2f49d2cfac20
 
-		formatStringDefinition = CONVERT(CALCULATE([Volume_FCST Topline bar], Formatter[Group] = "NUM_POS1"), STRING)
+		formatStringDefinition = CONVERT(CALCULATE([Volume_FCST Topline bar], Formatter[Group] = "NO$_POS1"), STRING)
 
 	measure IM_Selected_Period_Op =
 			
@@ -14173,10 +14163,10 @@ table 'Measure Table'
 	measure 'Revenue_FCST topline bar' =
 			CALCULATE(SWITCH(
 			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", [Quarter FCST dynamic Revenue Bar],
-				"FCST", "",
-				"YA", [Quarter FCST dynamic Revenue Bar]
-			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+			    "AOP", CALCULATE([Revenue_AOP_TL], V_Dim_FB_CalDay[LE_CD]),
+				"FCST", BLANK(),
+				"YA", [Revenue_PY_TL]
+			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: 77bfb708-cb56-4ee6-944c-cc235f353652
 
@@ -14185,10 +14175,10 @@ table 'Measure Table'
 	measure 'Rate_Per_Case_FCST topline bar' = ```
 			CALCULATE(SWITCH(
 			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", CALCULATE([Quarter FCST dynamic Rate per case], 'Time Intel'[Group] = "CY_LE_CD"),
+			    "AOP", [Rate_Per_Case_AOP_TL],
 			    "FCST", BLANK(),
-			    "YA", CALCULATE([Quarter FCST dynamic Rate per case], 'Time Intel'[Group] = "YA_LE_CD") 
-			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]))
+			    "YA", DIVIDE([Revenue_PY_TL], [Volume_PY_TL]) 
+			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 			```
 		displayFolder: Topline
 		lineageTag: 11ec5284-d599-415e-8895-e409552b0765
@@ -14708,7 +14698,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Volume_Bar_Act_YA = CALCULATE([Volume_TL], 'Time Intel'[Group] = "YA_LE_CD")
+	measure Volume_Bar_Act_YA = CALCULATE([Volume_TL], 'Time Intel'[Group] = "YA_FULL")
 		displayFolder: Topline
 		lineageTag: d1fdbf0d-57f0-4213-b4b6-9f0e4bf8c331
 
@@ -15244,6 +15234,18 @@ table 'Measure Table'
 		formatString: #,##0%;(#,##0%)
 		displayFolder: Ops
 		lineageTag: 52d0310a-789a-4e9c-92e9-441fa14378de
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Revenue_Full_PY_TL = CALCULATE([Revenue_TL], 'Time Intel'[Group] = "YA_FULL")
+		displayFolder: Topline
+		lineageTag: 283ac840-2927-4d9b-8c07-d2d4124c901c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Volume_Full_PY_TL = CALCULATE([Volume_TL], 'Time Intel'[Group] = "YA_FULL")
+		displayFolder: Topline
+		lineageTag: 76b8a3ad-af68-4e40-a877-63a9010efaa5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

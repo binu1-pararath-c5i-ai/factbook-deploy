@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "d226fcda99e0447f4039",
+  "position": {
+    "x": 726.84178849476768,
+    "y": 46.123439532490728,
+    "z": 7001,
+    "height": 195.62700215504688,
+    "width": 151.094026054711
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "DayDate"
+                }
+              },
+              "queryRef": "Operation_Cal_Day.DayDate",
+              "nativeQueryRef": "DayDate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Operation_Cal_Day"
+                  }
+                },
+                "Property": "DayDate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "88a58a22a248c52f5bc8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Operation_Cal_Day"
+              }
+            },
+            "Property": "DayDate"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

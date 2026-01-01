@@ -1,0 +1,216 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "790d347fc73dbe125216",
+  "displayName": "Topline Summary",
+  "displayOption": "FitToPage",
+  "height": 900,
+  "width": 1350,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d569b731aaace30af72e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "Metrics"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "7214f14b6976230850aa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_CalDay"
+              }
+            },
+            "Property": "GE_CL_Y0"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_Dim_FB_CalDay",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "v"
+                          }
+                        },
+                        "Property": "GE_CL_Y0"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "true"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "5c146cbb9b376ea4a716",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Operation_Cal_Day"
+              }
+            },
+            "Property": "L1"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "o",
+              "Entity": "Operation_Cal_Day",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "StartsWith": {
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "o"
+                            }
+                          },
+                          "Property": "L1"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'We'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "6a7dca429419907b617f",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "ded6dd13f23c3e5d0e17",
+        "boundFilter": "d569b731aaace30af72e",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metric Table"
+              }
+            },
+            "Property": "Metrics"
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "5249fe0275f0d730fab4",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ac63d75647e2ea21e93d",
+      "target": "7bcefbfd0b9de6b49250",
+      "type": "DataFilter"
+    },
+    {
+      "source": "74757899f3023884e87b",
+      "target": "7bcefbfd0b9de6b49250",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "74757899f3023884e87b",
+      "type": "DataFilter"
+    },
+    {
+      "source": "5249fe0275f0d730fab4",
+      "target": "7bcefbfd0b9de6b49250",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "ac63d75647e2ea21e93d",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "bd716d4e7e0d09951352",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "50fc99b11030010750d5",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "3ccd598c0a740474bd16",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "a709fdbe3eb13e743e07",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "93564948677dd530eba8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7bcefbfd0b9de6b49250",
+      "target": "274714863097b944edfb",
+      "type": "NoFilter"
+    }
+  ]
+}
