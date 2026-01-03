@@ -3743,20 +3743,13 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Volume_FCST_TL =
-			
-			IF (NOT [IsFiltered_NC_to_SG], CALCULATE(SUM(V_Fact_FB_Topline_Budget_All[SalesCasesFC]),
-				V_Fact_FB_Topline_Budget_All[ISFC] = TRUE()))
+	measure Volume_FCST_TL = IF (NOT [IsFiltered_NC_to_SG], SUM(V_Fact_FB_Topline_Budget_All[SalesCasesFC]))
 		displayFolder: Topline
 		lineageTag: 302ab3ab-1d6e-402e-94bd-35aac8913f5a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Revenue_FCST_TL =
-			
-			IF([IsFiltered_NC_to_SG], "", CALCULATE(SUM(V_Fact_FB_Topline_Budget_All[RevenueDeadNetFC]),
-			    FILTER(V_Fact_FB_Topline_Budget_All, V_Fact_FB_Topline_Budget_All[ISFC] = TRUE())
-			))
+	measure Revenue_FCST_TL = IF(NOT [IsFiltered_NC_to_SG], SUM(V_Fact_FB_Topline_Budget_All[RevenueDeadNetFC]))
 		displayFolder: Topline
 		lineageTag: 7fa9e8dd-43dc-4134-adb8-95789fc754e9
 
@@ -7723,8 +7716,7 @@ table 'Measure Table'
 			    SAMEPERIODLASTYEAR(Operation_Cal_Day[DayDate])
 			)
 			var _e = SELECTEDVALUE(V_Fact_FB_Ops_CPH_CPC[DelvElasticity])
-			var _val = 
-			c22 / ((d5 + f5) * ((((c22-c5) / c5) * _e) + 1))
+			var _val = DIVIDE(c22, (d5 + f5) * (DIVIDE(c22 - c5, c5) * _e + 1), BLANK())
 			return _val
 			```
 		displayFolder: Ops
@@ -7751,8 +7743,7 @@ table 'Measure Table'
 			    SAMEPERIODLASTYEAR(Operation_Cal_Day[DayDate]))
 			var _e = SELECTEDVALUE(V_Fact_FB_Ops_CPH_CPC[WhseElasticity])
 			
-			var _val = c22 / ((d5 + f5) * (((c22 - c5) / c5) * _e + 1))
-			
+			var _val = DIVIDE(c22, (d5 + f5) * (DIVIDE(c22 - c5, c5) * _e + 1), BLANK())
 			RETURN _val
 			```
 		displayFolder: Ops
@@ -7788,7 +7779,7 @@ table 'Measure Table'
 			    SAMEPERIODLASTYEAR(Operation_Cal_Day[DayDate])
 			)
 			var _e = SELECTEDVALUE(V_Fact_FB_Ops_CPH_CPC[MechElasticity])
-			var _val = DIVIDE(c22, (d5 + f5) * (((c22 - c5) / c5 * _e) + 1), BLANK())
+			var _val = DIVIDE(c22, (d5 + f5) * (DIVIDE(c22 - c5, c5) * _e + 1), BLANK())
 			return _val
 			```
 		displayFolder: Ops
@@ -8954,12 +8945,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Quarter FCST dynamic Rate per case' =
-			
-			CALCULATE([Rate_Per_Case_FCST_TL], FILTER(
-			    ALL('V_Fact_FB_Topline_Budget_All'[TimeGranularity], V_Fact_FB_Topline_Budget_All[RYBkt]),
-			    V_Fact_FB_Topline_Budget_All[TimeGranularity] = "Monthly"
-			))
+	measure 'Quarter FCST dynamic Rate per case' = CALCULATE([Rate_Per_Case_FCST_TL])
 		displayFolder: Topline
 		lineageTag: db5fbb99-80c6-467b-8e9e-c9e4790a870e
 
@@ -9032,7 +9018,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Quarter dynamic volume FCST KPICARD' = CALCULATE([Volume_FCST_TL_nw], KEEPFILTERS(Operation_Cal_Day[DayDate] <= MAX(V_Dim_FB_Ref[CM])))
+	measure 'Quarter dynamic volume FCST KPICARD' = CALCULATE([Volume_FCST_TL_nw], KEEPFILTERS(Operation_Cal_Day[DayDate] <= MAX(V_Dim_FB_Ref[CD])))
 		displayFolder: Topline
 		lineageTag: d37de0b7-e189-4ec2-94e1-0418b141a24b
 

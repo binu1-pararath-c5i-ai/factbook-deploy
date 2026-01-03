@@ -152,7 +152,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "82.89351448845204D"
+                  "Value": "94.7031707923318D"
                 }
               }
             }
@@ -166,7 +166,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "79.89351710215581D"
+                  "Value": "87.76702055975116D"
                 }
               }
             }
@@ -187,6 +187,33 @@
           },
           "selector": {
             "metadata": "Measure Table.Schedule_Adherence_Prior_Period_num"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "51.82365475736118D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Haulback_cases_table"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

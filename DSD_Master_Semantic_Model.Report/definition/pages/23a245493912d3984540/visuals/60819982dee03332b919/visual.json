@@ -485,6 +485,19 @@
             "metadata": "Operation_Cal_Day.FirstDayOfMonth"
           }
         }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

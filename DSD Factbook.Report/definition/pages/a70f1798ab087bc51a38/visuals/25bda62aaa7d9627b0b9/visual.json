@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "POGType",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

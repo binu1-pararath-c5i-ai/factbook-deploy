@@ -331,6 +331,19 @@
             "metadata": "Measure Table.Revenue_Bar_Actual_TL"
           }
         }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "2e79f2f06cd221e4a08b",
+  "name": "eada03a75ea4dbf4be0c",
   "position": {
-    "x": 128.03710659098365,
-    "y": 43.369091356285871,
-    "z": 8000,
-    "height": 55.027465966085508,
-    "width": 206.35299737282065,
-    "tabOrder": 0
+    "x": 135.82176123375075,
+    "y": 47.384762359684743,
+    "z": 11500,
+    "height": 48.913303080964894,
+    "width": 212.46716025794126,
+    "tabOrder": 53000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,12 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Revenue_TL"
+                  "Property": "Volume_TL"
                 }
               },
-              "queryRef": "Measure Table.Revenue_TL",
-              "nativeQueryRef": "Revenue_TL"
+              "queryRef": "Measure Table.Volume_TL",
+              "nativeQueryRef": "Volume_TL",
+              "format": "0.0"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Revenue_TL"
+                "Property": "Volume_TL"
               }
             },
             "direction": "Descending"
@@ -74,7 +75,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "21D"
                 }
               }
             },
@@ -106,30 +107,16 @@
         },
         {
           "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
                   "Value": "24D"
                 }
               }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
             }
           },
           "selector": {
-            "metadata": "Measure Table.Revenue_TL"
+            "metadata": "Measure Table.Volume_TL"
           }
         }
       ],
@@ -205,6 +192,19 @@
             "id": "default"
           }
         }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "cellPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "8L"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -214,7 +214,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'KPI2'"
+                  "Value": "'KPI Volume'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -284,5 +291,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "fbb63f95962d9ae42994"
+  "parentGroupName": "8ea90c72906b22052a6e"
 }

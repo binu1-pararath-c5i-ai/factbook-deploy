@@ -11,14 +11,6 @@ table V_Fact_FB_Topline_Budget_All
 
 		annotation SummarizationSetBy = Automatic
 
-	column RYBkt
-		dataType: string
-		lineageTag: d729ffed-f2b9-4f58-bd9f-af7da4a7323f
-		summarizeBy: none
-		sourceColumn: RYBkt
-
-		annotation SummarizationSetBy = Automatic
-
 	column BranchID
 		dataType: string
 		lineageTag: 842d125f-1e7c-4bc1-8b0a-21446a242abc
@@ -86,14 +78,6 @@ table V_Fact_FB_Topline_Budget_All
 
 		annotation SummarizationSetBy = Automatic
 
-	column TimeGranularity
-		dataType: string
-		lineageTag: b89610d0-3b73-448d-ab3a-55812d983997
-		summarizeBy: none
-		sourceColumn: TimeGranularity
-
-		annotation SummarizationSetBy = Automatic
-
 	column PeriodEnd
 		dataType: dateTime
 		formatString: dd MMM yyyy
@@ -156,15 +140,6 @@ table V_Fact_FB_Topline_Budget_All
 		lineageTag: 09b694d7-4929-4d6a-b74d-83770a9f4d8a
 		summarizeBy: none
 		sourceColumn: BranchNationalChain
-
-		annotation SummarizationSetBy = Automatic
-
-	column ISFC
-		dataType: boolean
-		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: a3818c32-0016-427e-b1ba-56e52a58cb5d
-		summarizeBy: none
-		sourceColumn: ISFC
 
 		annotation SummarizationSetBy = Automatic
 

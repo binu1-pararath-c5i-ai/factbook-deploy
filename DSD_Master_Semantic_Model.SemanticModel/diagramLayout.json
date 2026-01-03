@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 9807.3397448828873,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -687,7 +687,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 12951.060904732592,
+            "y": 0
+          },
           "nodeIndex": "Time Intel",
           "size": {
             "height": 128,
@@ -696,7 +699,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 13318.421318649167,
+            "y": 0
+          },
           "nodeIndex": "Metric",
           "size": {
             "height": 128,
@@ -705,7 +711,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 13685.781732565742,
+            "y": 0
+          },
           "nodeIndex": "Formatted",
           "size": {
             "height": 128,
@@ -714,7 +723,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 14053.142146482314,
+            "y": 0
+          },
           "nodeIndex": "Formatter",
           "size": {
             "height": 128,
@@ -2624,6 +2636,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Topline",
+  "selectedDiagram": "All tables",
   "defaultDiagram": "All tables"
 }

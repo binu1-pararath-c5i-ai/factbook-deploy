@@ -2322,31 +2322,6 @@
               "objects": {}
             }
           },
-          "fa376860ddc0c7575721": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "1b4af49eabc13b264362",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Measure Table"
-                        }
-                      },
-                      "Property": "Volume_TL"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {}
-            }
-          },
           "fc6beb35b6382787628b": {
             "singleVisual": {
               "visualType": "shape",

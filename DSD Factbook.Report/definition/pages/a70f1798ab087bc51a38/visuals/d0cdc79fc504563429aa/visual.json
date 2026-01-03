@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "POG_bars",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

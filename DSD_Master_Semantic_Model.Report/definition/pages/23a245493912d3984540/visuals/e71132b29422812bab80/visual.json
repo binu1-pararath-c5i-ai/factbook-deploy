@@ -555,6 +555,19 @@
             "metadata": "Measure Table.Quarter dynamic volume FCST KPICARD"
           }
         }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "fc9f400398ea1f2163b3",
   "position": {
-    "x": 1.2228325770241224,
-    "y": 92.935275853833289,
+    "x": 0,
+    "y": 79.484117506567955,
     "z": 6000,
-    "height": 385.19226176259855,
-    "width": 1159.2452830188679
+    "height": 398.64342010986388,
+    "width": 926.90709338428474
   },
   "visual": {
     "visualType": "tableEx",
@@ -392,7 +392,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "88.17601805178332D"
+                  "Value": "80.85358474361777D"
                 }
               }
             }
@@ -420,7 +420,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "102.87054043615917D"
+                  "Value": "64.81798734889468D"
                 }
               }
             }
@@ -448,7 +448,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "107.15251285397207D"
+                  "Value": "82.27013172645903D"
                 }
               }
             }
@@ -532,7 +532,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "121.61571351341684D"
+                  "Value": "113.02861260454672D"
                 }
               }
             }
@@ -546,7 +546,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "117.94355430733347D"
+                  "Value": "111.82615204656979D"
                 }
               }
             }
@@ -588,7 +588,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "108.06016530884861D"
+                  "Value": "103.17109763022977D"
                 }
               }
             }
@@ -602,7 +602,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "104.94621939019092D"
+                  "Value": "98.39028984989426D"
                 }
               }
             }
@@ -616,7 +616,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "68.37641213585434D"
+                  "Value": "54.99902011439524D"
                 }
               }
             }
@@ -630,7 +630,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "119.75415404237485D"
+                  "Value": "112.40184114737687D"
                 }
               }
             }
@@ -644,7 +644,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "122.57429819472199D"
+                  "Value": "107.84792890242663D"
                 }
               }
             }
@@ -672,7 +672,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "111.77746724637241D"
+                  "Value": "106.52529559198312D"
                 }
               }
             }
@@ -700,13 +700,40 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "100.41293221757661D"
+                  "Value": "113.46315364579885D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Measure Table.Revenue_Full_PY_TL"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.3439207079688D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Volume_Full_PY_TL"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

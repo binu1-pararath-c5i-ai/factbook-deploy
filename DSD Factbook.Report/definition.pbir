@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byConnection": {
-      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/DEV_DSD_EFFECTIVENESS;initial catalog=DSD_Master_Semantic_Model;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=5e49f4d6-a1de-431a-afb2-46d6a35d753f"
+      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/DEV_DSD_EFFECTIVENESS;initial catalog=DSD_Master_Semantic_Model;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=3d8f0ed5-b70d-4011-8a87-f8cd10a6b865"
     }
   }
 }

@@ -205,6 +205,19 @@
             "metadata": "Measure Table.Rate_Per_Case_Bar_AOP_FCST_YA"
           }
         }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
