@@ -36811,35 +36811,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_topline_budget_all.profit_center": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Topline_Budget_All",
-			          "ConceptualProperty": "ProfitCenter"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "profit center": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ProfitCenter": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "center": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_rev_detail.promotion_end_date": {
 			      "Definition": {
 			        "Binding": {

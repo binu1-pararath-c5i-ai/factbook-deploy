@@ -107,14 +107,6 @@ table V_Fact_FB_Topline_Budget_All
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProfitCenter
-		dataType: string
-		lineageTag: 8575b259-ecd2-4103-8703-ccb24eafed5c
-		summarizeBy: none
-		sourceColumn: ProfitCenter
-
-		annotation SummarizationSetBy = Automatic
-
 	column GPDeadNetBudget
 		dataType: double
 		lineageTag: 35bf3d04-4f28-4f81-8b7d-62c83a59f9d5
@@ -140,6 +132,39 @@ table V_Fact_FB_Topline_Budget_All
 		lineageTag: 09b694d7-4929-4d6a-b74d-83770a9f4d8a
 		summarizeBy: none
 		sourceColumn: BranchNationalChain
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeGranularity
+		dataType: string
+		lineageTag: fe213798-7834-40cb-b0d7-1de2ce5d222d
+		summarizeBy: none
+		sourceColumn: TimeGranularity
+
+		annotation SummarizationSetBy = Automatic
+
+	column RYBkt
+		dataType: string
+		lineageTag: b6831beb-ece2-4458-ab2a-4055ce7ce7ce
+		summarizeBy: none
+		sourceColumn: RYBkt
+
+		annotation SummarizationSetBy = Automatic
+
+	column ISFC
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 018d435a-5164-4b51-85ec-745b640719f1
+		summarizeBy: none
+		sourceColumn: ISFC
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProfitCenterName
+		dataType: string
+		lineageTag: fb0706fb-039c-4225-9404-280690eb4b61
+		summarizeBy: none
+		sourceColumn: ProfitCenterName
 
 		annotation SummarizationSetBy = Automatic
 

@@ -9178,25 +9178,21 @@ table 'Measure Table'
 				RETURN IF(_a = "Vol.Adjusted","#,###",
 				"(#,##0%);#,##0%")
 
-	measure 'Previous Month Name' = ```
+	measure 'Previous Month Name' =
 			
-			IF(
-			ISFILTERED(Operation_Cal_Day[Monthname]),
+			IF(SELECTEDVALUE(Operation_Cal_Day[L1]) = "Weeks", BLANK(), "Prior Period = " & SWITCH(TRUE(),
 			
-			CONCATENATE("Prior Period = ",
-			    CALCULATE(SELECTEDVALUE( Operation_Cal_Day[Monthdesc]),
-			        DATEADD ( Operation_Cal_Day[DayDate], -1, MONTH ))),
-			IF(
-			ISFILTERED(Operation_Cal_Day[Quarter_Name]),       
-			CONCATENATE("Prior Period = ",CALCULATE(SELECTEDVALUE( Operation_Cal_Day[QuarterDesc]),
-			        DATEADD ( Operation_Cal_Day[DayDate], -1, QUARTER ))),
+			    ISFILTERED(Operation_Cal_Day[L3]),
+			    FORMAT(EDATE(MIN(V_Dim_FB_CalDay[FirstDayOfMonth]), -1), "MMM yyyy"),
 			
-			IF(ISFILTERED(Operation_Cal_Day[Year]),
-			 CONCATENATE("Prior Period = ",CALCULATE(SELECTEDVALUE( Operation_Cal_Day[year]),
-			         DATEADD ( Operation_Cal_Day[DayDate], -1, YEAR ))),BLANK())
+			    ISFILTERED(Operation_Cal_Day[L2]),
+			    FORMAT(EDATE(MIN(V_Dim_FB_CalDay[FirstDayOfMonth]), -3), """Q""Q yyyy"),
+			
+			    FORMAT(EDATE(MIN(V_Dim_FB_CalDay[FirstDayOfMonth]), -12), "yyyy")
 			))
-			```
 		lineageTag: a993db7f-37ab-4a10-b432-84177ca9b3c1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Label vs Selected Metric_%Temp' =
 			
@@ -14701,11 +14697,11 @@ table 'Measure Table'
 		lineageTag: c4917e27-19fa-4d17-84f5-d88da3021e83
 
 	measure IsFiltered_NC_to_SG =
-			FALSE()
-			// ISFILTERED(V_Dim_FB_CustChainHeir[NationalChainName])
-			//     || ISFILTERED(V_Dim_FB_CustChainHeir[TerritoryName])
-			//     || ISFILTERED(V_Dim_FB_CustChainHeir[BranchName])
-			//     || ISFILTERED(V_Dim_FB_CustChainHeir[SalesGroupName])
+			
+			ISFILTERED(V_Dim_FB_CustChainHeir[NationalChainName])
+			    || ISFILTERED(V_Dim_FB_CustChainHeir[TerritoryName])
+			    || ISFILTERED(V_Dim_FB_CustChainHeir[BranchName])
+			    || ISFILTERED(V_Dim_FB_CustChainHeir[SalesGroupName])
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: fd1eeaea-2abc-40a1-b6b8-bb2061ac760e
 
