@@ -97,23 +97,6 @@ table V_Fact_FB_ToplineActuals_Summary
 
 		annotation SummarizationSetBy = Automatic
 
-	column TimeGranularity
-		dataType: string
-		lineageTag: 2675ed77-afcd-4130-bc76-593eab2328f0
-		summarizeBy: none
-		sourceColumn: TimeGranularity
-
-		annotation SummarizationSetBy = Automatic
-
-	column IsFranchiseSales
-		dataType: boolean
-		formatString: """TRUE"";""TRUE"";""FALSE"""
-		lineageTag: c9ef283c-ebc0-4580-bec5-892d590d5982
-		summarizeBy: none
-		sourceColumn: IsFranchiseSales
-
-		annotation SummarizationSetBy = Automatic
-
 	partition V_Fact_FB_ToplineActuals_Summary = m
 		mode: import
 		source =

@@ -6,7 +6,7 @@
     "y": 478.12753761643182,
     "z": 0,
     "height": 242.12085025077621,
-    "width": 1029.6250298543109
+    "width": 1087.0981609744447
   },
   "visual": {
     "visualType": "tableEx",
@@ -22,11 +22,11 @@
                       "Entity": "Operation_Cal_Day"
                     }
                   },
-                  "Property": "DayDate"
+                  "Property": "FirstDayOfMonth"
                 }
               },
-              "queryRef": "Operation_Cal_Day.DayDate",
-              "nativeQueryRef": "DayDate"
+              "queryRef": "Operation_Cal_Day.FirstDayOfMonth",
+              "nativeQueryRef": "FirstDayOfMonth"
             },
             {
               "field": {
@@ -195,7 +195,7 @@
                     "Entity": "Operation_Cal_Day"
                   }
                 },
-                "Property": "DayDate"
+                "Property": "FirstDayOfMonth"
               }
             },
             "direction": "Descending"
@@ -210,7 +210,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "79.0844990209634D"
+                  "Value": "84.03720973125398D"
                 }
               }
             }
@@ -330,6 +330,20 @@
           "selector": {
             "metadata": "Measure Table.Revenue_Bar_Actual_TL"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.45229165767901D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Operation_Cal_Day.FirstDayOfMonth"
+          }
         }
       ],
       "total": [
@@ -350,20 +364,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "51f784f9c3c1eefe5f03",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Operation_Cal_Day"
-              }
-            },
-            "Property": "DayDate"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "571f1db8999915c9d891",
         "field": {

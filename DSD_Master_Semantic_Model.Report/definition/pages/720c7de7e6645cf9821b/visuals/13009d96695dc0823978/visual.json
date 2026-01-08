@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "1ec743d0189d9c597740",
+  "name": "13009d96695dc0823978",
   "position": {
-    "x": 1159.3200077351757,
-    "y": 158.41639857250848,
-    "z": 3000,
-    "height": 95.049839143505082,
-    "width": 106.57103176696025,
-    "tabOrder": 3000
+    "x": 1122.5603057081444,
+    "y": 426.76856938141867,
+    "z": 6001,
+    "height": 64.810126582278485,
+    "width": 157.74540243611179
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +19,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Metric Table"
+                      "Entity": "V_Dim_FB_CustChainHeir"
                     }
                   },
-                  "Property": "Metrics"
+                  "Property": "BranchName"
                 }
               },
-              "queryRef": "Metric Table.Metrics",
-              "nativeQueryRef": "Metrics",
+              "queryRef": "V_Dim_FB_CustChainHeir.BranchName",
+              "nativeQueryRef": "BranchName",
               "active": true
             }
           ]
@@ -41,7 +40,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -51,20 +50,13 @@
       "general": [
         {
           "properties": {
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "filter": {
               "filter": {
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "m",
-                    "Entity": "Metric Table",
+                    "Name": "v",
+                    "Entity": "V_Dim_FB_CustChainHeir",
                     "Type": 0
                   }
                 ],
@@ -77,10 +69,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "m"
+                                  "Source": "v"
                                 }
                               },
-                              "Property": "Metrics"
+                              "Property": "BranchName"
                             }
                           }
                         ],
@@ -88,7 +80,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'FCST'"
+                                "Value": "'AVENEL'"
                               }
                             }
                           ]
@@ -97,32 +89,6 @@
                     }
                   }
                 ]
-              }
-            }
-          }
-        }
-      ],
-      "selection": [
-        {
-          "properties": {
-            "strictSingleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
               }
             }
           }
