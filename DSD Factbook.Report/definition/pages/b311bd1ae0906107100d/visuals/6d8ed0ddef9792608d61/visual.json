@@ -43,7 +43,7 @@
               },
               "queryRef": "Operation_Cal_Day.L2",
               "nativeQueryRef": "L2",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -103,7 +103,20 @@
             "isCollapsed": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Weeks'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {
@@ -147,13 +160,28 @@
                               },
                               "Property": "L1"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "o"
+                                }
+                              },
+                              "Property": "L2"
+                            }
                           }
                         ],
                         "Values": [
                           [
                             {
                               "Literal": {
-                                "Value": "'2025'"
+                                "Value": "'Weeks'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'Curr Wk'"
                               }
                             }
                           ]
@@ -172,6 +200,16 @@
                               },
                               "Property": "L1"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Operation_Cal_Day"
+                                }
+                              },
+                              "Property": "L2"
+                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -181,7 +219,16 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'2025'"
+                                      "Value": "'Weeks'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "1": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'Curr Wk'"
                                     }
                                   }
                                 ]
@@ -200,12 +247,25 @@
                                   "Property": "L1"
                                 }
                               }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Operation_Cal_Day"
+                                    }
+                                  },
+                                  "Property": "L2"
+                                }
+                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "2025"
+                            "0": "Weeks",
+                            "1": "Curr Wk"
                           }
                         ]
                       }

@@ -195,28 +195,13 @@
                               },
                               "Property": "L1"
                             }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "o"
-                                }
-                              },
-                              "Property": "L2"
-                            }
                           }
                         ],
                         "Values": [
                           [
                             {
                               "Literal": {
-                                "Value": "'2025'"
-                              }
-                            },
-                            {
-                              "Literal": {
-                                "Value": "'Q4'"
+                                "Value": "'2026'"
                               }
                             }
                           ]
@@ -235,16 +220,6 @@
                               },
                               "Property": "L1"
                             }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Operation_Cal_Day"
-                                }
-                              },
-                              "Property": "L2"
-                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -254,16 +229,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'2025'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'Q4'"
+                                      "Value": "'2026'"
                                     }
                                   }
                                 ]
@@ -282,25 +248,12 @@
                                   "Property": "L1"
                                 }
                               }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Operation_Cal_Day"
-                                    }
-                                  },
-                                  "Property": "L2"
-                                }
-                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "2025",
-                            "1": "Q4"
+                            "0": "2026"
                           }
                         ]
                       }

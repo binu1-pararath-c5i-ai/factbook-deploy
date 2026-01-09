@@ -58,7 +58,7 @@
               },
               "queryRef": "Operation_Cal_Day.L3",
               "nativeQueryRef": "L3",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -126,19 +126,7 @@
                   }
                 }
               ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Q4'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
+              "isToggled": true
             },
             {
               "identityValues": [
