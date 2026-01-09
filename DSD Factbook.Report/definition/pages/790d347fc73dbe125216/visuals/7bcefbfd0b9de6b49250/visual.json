@@ -4,10 +4,10 @@
   "position": {
     "x": 40.027797081306467,
     "y": 53,
-    "z": 44000,
+    "z": 43000,
     "height": 40,
     "width": 174.6667509002464,
-    "tabOrder": 29000
+    "tabOrder": 28000
   },
   "visual": {
     "visualType": "slicer",
@@ -195,6 +195,16 @@
                               },
                               "Property": "L1"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "o"
+                                }
+                              },
+                              "Property": "L2"
+                            }
                           }
                         ],
                         "Values": [
@@ -202,6 +212,11 @@
                             {
                               "Literal": {
                                 "Value": "'2025'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'Q4'"
                               }
                             }
                           ]
@@ -220,6 +235,16 @@
                               },
                               "Property": "L1"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Operation_Cal_Day"
+                                }
+                              },
+                              "Property": "L2"
+                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -230,6 +255,15 @@
                                   {
                                     "Literal": {
                                       "Value": "'2025'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "1": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'Q4'"
                                     }
                                   }
                                 ]
@@ -248,12 +282,25 @@
                                   "Property": "L1"
                                 }
                               }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Operation_Cal_Day"
+                                    }
+                                  },
+                                  "Property": "L2"
+                                }
+                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "2025"
+                            "0": "2025",
+                            "1": "Q4"
                           }
                         ]
                       }

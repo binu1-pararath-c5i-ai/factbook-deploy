@@ -55,7 +55,7 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bookmark'"
+                  "Value": "'ClearAllSlicers'"
                 }
               }
             },

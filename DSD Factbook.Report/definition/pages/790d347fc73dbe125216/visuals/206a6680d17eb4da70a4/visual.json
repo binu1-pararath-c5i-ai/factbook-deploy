@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "206a6680d17eb4da70a4",
   "position": {
-    "x": 212.87510265967529,
-    "y": 89.152820772000766,
+    "x": 211.05565733779773,
+    "y": 87.3333754501232,
     "z": 5000,
-    "height": 60.0416956219597,
-    "width": 121.90283656579696,
+    "height": 61.861140943837263,
+    "width": 103.7083833470213,
     "tabOrder": 0
   },
   "visual": {
@@ -47,6 +47,20 @@
           },
           "selector": {
             "metadata": "Measure Table.Volume_Change_vs_YA_TL_Card"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.25329198077098D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.2Y"
           }
         }
       ],

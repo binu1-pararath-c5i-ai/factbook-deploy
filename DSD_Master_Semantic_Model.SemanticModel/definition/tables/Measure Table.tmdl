@@ -5070,7 +5070,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops =
+	measure breakage_abs_rpc_change_vs_ya_selection_opsObsolescence_Abs_RPC_Change_vs_YA_Selection_Ops =
 			
 			SWITCH(
 			    SELECTEDVALUE('Abs/RPC Table'[Abs/RPC]),
@@ -6475,7 +6475,7 @@ table 'Measure Table'
 				    "RPC", "$0.000"
 				)
 
-	measure Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI = [Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops]
+	measure Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI = [breakage_abs_rpc_change_vs_ya_selection_opsObsolescence_Abs_RPC_Change_vs_YA_Selection_Ops]
 		displayFolder: Ops
 		lineageTag: fca59527-df1a-420d-835b-f5321e4e60ca
 
@@ -8562,10 +8562,9 @@ table 'Measure Table'
 			(
 			   ( [Breakage_Abs_RPC_Selection_OPs]- [Breakage_Abs_RPC_Selection_Py_OPs]), [Breakage_Abs_RPC_Selection_Py_OPs]
 			)
+		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Ops
 		lineageTag: 39fffcbf-57be-4a44-84e1-4d3f965c1512
-
-		formatStringDefinition = "#,##0%;(#,##0%)"
 
 	measure Wh_Delv_Mech_Attainment_AOP_Fcst_YA_Actuals_VolAdj_CPC_Selection_Ops_Table =
 			
@@ -14005,9 +14004,9 @@ table 'Measure Table'
 	measure 'Volume_FCST Topline bar' =
 			CALCULATE(SWITCH(
 			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", CALCULATE([Volume_AOP_TL], V_Dim_FB_CalDay[LE_CD]),
+			    "AOP", [Volume_FCST_TL_nw],
 			    "FCST", BLANK(),
-			    "YA", [Volume_PY_TL]
+			    "YA", [Volume_FCST_TL_nw]
 			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: 68ca4353-2a63-4639-a890-2f49d2cfac20
@@ -14031,23 +14030,16 @@ table 'Measure Table'
 	measure 'Revenue_FCST topline bar' =
 			CALCULATE(SWITCH(
 			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", CALCULATE([Revenue_AOP_TL], V_Dim_FB_CalDay[LE_CD]),
+			    "AOP", [Revenue_FCST_TL_nw],
 				"FCST", BLANK(),
-				"YA", [Revenue_PY_TL]
+				"YA", [Revenue_FCST_TL_nw]
 			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
 		displayFolder: Topline
 		lineageTag: 77bfb708-cb56-4ee6-944c-cc235f353652
 
 		formatStringDefinition = CONVERT(CALCULATE([Revenue_FCST topline bar], Formatter[Group] = "NUM_POS1"), STRING)
 
-	measure 'Rate_Per_Case_FCST topline bar' = ```
-			CALCULATE(SWITCH(
-			    SELECTEDVALUE('Metric Table'[Metrics]),
-			    "AOP", [Rate_Per_Case_AOP_TL],
-			    "FCST", BLANK(),
-			    "YA", DIVIDE([Revenue_PY_TL], [Volume_PY_TL]) 
-			), REMOVEFILTERS(Operation_Cal_Day[L2], Operation_Cal_Day[L3]), REMOVEFILTERS(V_Dim_FB_CalDay[LE_CD]))
-			```
+	measure 'Rate_Per_Case_FCST topline bar' = DIVIDE([Revenue_FCST topline bar], [Volume_FCST Topline bar])
 		displayFolder: Topline
 		lineageTag: 11ec5284-d599-415e-8895-e409552b0765
 

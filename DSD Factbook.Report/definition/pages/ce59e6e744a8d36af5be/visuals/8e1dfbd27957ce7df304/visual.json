@@ -59,7 +59,7 @@
               },
               "queryRef": "V_Dim_FB_CustChainHeir.TerritoryName",
               "nativeQueryRef": "TerritoryName",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -342,26 +342,13 @@
               "V_Dim_FB_CustChainHeir.RegionName"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "V_Dim_FB_CustChainHeir"
-                    }
-                  },
-                  "Property": "RegionName"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
               "V_Dim_FB_CustChainHeir.TerritoryName"
             ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
           },
           {
             "queryRefs": [
@@ -406,19 +393,7 @@
                   }
                 }
               ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'EAST-CENTRAL'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
+              "isToggled": true
             }
           ]
         }

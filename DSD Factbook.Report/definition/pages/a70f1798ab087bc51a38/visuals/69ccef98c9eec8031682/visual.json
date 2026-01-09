@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "CMA_Slicers",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

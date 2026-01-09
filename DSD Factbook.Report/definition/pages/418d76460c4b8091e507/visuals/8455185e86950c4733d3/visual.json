@@ -4,7 +4,7 @@
   "position": {
     "x": 40,
     "y": 54,
-    "z": 50000,
+    "z": 49000,
     "height": 41,
     "width": 164.44444444444443,
     "tabOrder": 11000
@@ -126,7 +126,19 @@
                   }
                 }
               ],
-              "isToggled": true
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Q4'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
             },
             {
               "identityValues": [
@@ -137,28 +149,6 @@
                 }
               ],
               "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'2026'"
-                  }
-                }
-              ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Q1'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
             }
           ]
         }

@@ -20,36 +20,19 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Schema": "extension",
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Label vs Selected Metric_BSO_New"
+                  "Property": "Label vs Selected Metric_BSO"
                 }
               },
-              "queryRef": "Measure Table.Label vs Selected Metric_BSO_New",
-              "nativeQueryRef": "Label vs Selected Metric_BSO_New"
+              "queryRef": "Measure Table.Label vs Selected Metric_BSO",
+              "nativeQueryRef": "Label vs Selected Metric_BSO"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Schema": "extension",
-                    "Entity": "Measure Table"
-                  }
-                },
-                "Property": "Label vs Selected Metric_BSO_New"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },

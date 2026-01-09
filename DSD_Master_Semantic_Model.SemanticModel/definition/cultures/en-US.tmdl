@@ -17393,7 +17393,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops"
+			          "ConceptualProperty": "breakage_abs_rpc_change_vs_ya_selection_opsObsolescence_Abs_RPC_Change_vs_YA_Selection_Ops"
 			        }
 			      },
 			      "State": "Generated",

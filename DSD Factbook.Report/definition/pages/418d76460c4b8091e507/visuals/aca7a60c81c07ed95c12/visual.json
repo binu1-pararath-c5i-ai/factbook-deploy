@@ -4,13 +4,13 @@
   "position": {
     "x": 23.101170169995665,
     "y": 634.13855916171178,
-    "z": 21000,
+    "z": 20000,
     "height": 234.09390284033745,
     "width": 1306.3617411080927,
     "tabOrder": 51000
   },
   "visualGroup": {
-    "displayName": "Group Ops Mgmt",
+    "displayName": "Group 4",
     "groupMode": "ScaleMode"
   }
 }

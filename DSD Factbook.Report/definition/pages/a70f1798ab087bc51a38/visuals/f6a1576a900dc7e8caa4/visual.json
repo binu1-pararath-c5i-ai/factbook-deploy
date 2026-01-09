@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "CMA_bars",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }
