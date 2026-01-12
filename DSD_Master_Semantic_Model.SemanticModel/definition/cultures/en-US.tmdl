@@ -34251,32 +34251,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_topline_budget_all.branch_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Topline_Budget_All",
-			          "ConceptualProperty": "BranchID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "branch ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "BranchID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_topline_budget_all.item_ID": {
 			      "Definition": {
 			        "Binding": {
@@ -36846,41 +36820,6 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
-			    },
-			    "V_fact_FB_topline_budget_all.profit_center_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Topline_Budget_All",
-			          "ConceptualProperty": "ProfitCenterID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "profit center ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ProfitCenterID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "center": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "center ID": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
 			    },
 			    "V_fact_FB_topline_actuals_summary.sales_group_local_chain": {
 			      "Definition": {
@@ -39781,29 +39720,6 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
-			    },
-			    "V_fact_FB_topline_budget_all.curr_month_counter": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Topline_Budget_All",
-			          "ConceptualProperty": "CurrMonthCounter"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "curr month counter": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CurrMonthCounter": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
 			    },
 			    "measure_table.shrinklescence_abs_RPC_aops_FCST_YA_attainment_selection_ops_table_format_string": {
 			      "Definition": {

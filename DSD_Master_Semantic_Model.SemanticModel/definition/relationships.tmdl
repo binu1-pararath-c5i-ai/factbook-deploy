@@ -43,10 +43,6 @@ relationship 11004f47-5532-39cf-8b66-8025aa43749e
 	fromColumn: V_Fact_FB_Topline_Budget_All.ItemID
 	toColumn: V_Dim_FB_ProdHeir.ItemID
 
-relationship efa0fa0a-0fe0-1273-7821-fd72be92678f
-	fromColumn: V_Fact_FB_Topline_Budget_All.BranchID
-	toColumn: V_Dim_FB_SalesHier_Distinct.BranchID
-
 relationship 4a7e50d2-baa8-af06-aec2-350f0fca5a0a
 	fromColumn: V_Fact_FB_POGVoidDetail.RouteID
 	toColumn: V_Dim_RouteSalesCustHeir.RouteID
@@ -141,11 +137,6 @@ relationship d80c0642-475a-6136-5b6c-16d7ce3e255d
 	fromColumn: V_Fact_FB_POGVoidDetail.CustomerID
 	toColumn: V_Dim_FB_CustChainHeir.CustomerID
 
-relationship f39b9594-3012-d452-1c7c-19ec26aaebe3
-	toCardinality: many
-	fromColumn: V_Fact_FB_Topline_Budget_All.BranchID
-	toColumn: V_Dim_FB_CustChainHeir.BranchID
-
 relationship f6ae0c0c-07ff-5024-93e2-4d57676859ed
 	toCardinality: many
 	fromColumn: V_Fact_FB_CMAComplianceSummary.CustomerNumber
@@ -205,6 +196,7 @@ relationship 3d7e733a-bbe8-8c54-4e4a-0a9235768a99
 	toColumn: Operation_Cal_Day.DayDate
 
 relationship 8d5a7254-d9b9-3d5b-2eff-bbc4accaaf72
+	isActive: false
 	toCardinality: many
 	fromColumn: V_FACT_FB_OPS_ROLLEDSTOPORDERS.OriginalOrderRDD
 	toColumn: Operation_Cal_Day.DayDate

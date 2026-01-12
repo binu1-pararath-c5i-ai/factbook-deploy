@@ -11,14 +11,6 @@ table V_Fact_FB_Topline_Budget_All
 
 		annotation SummarizationSetBy = Automatic
 
-	column BranchID
-		dataType: string
-		lineageTag: 842d125f-1e7c-4bc1-8b0a-21446a242abc
-		summarizeBy: none
-		sourceColumn: BranchID
-
-		annotation SummarizationSetBy = Automatic
-
 	column ItemID
 		dataType: string
 		lineageTag: 1ce0275f-47b6-4c9b-bdf2-510d9023b732
@@ -89,24 +81,6 @@ table V_Fact_FB_Topline_Budget_All
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column CurrMonthCounter
-		dataType: double
-		lineageTag: d642797f-1d45-45da-a7d1-641b1f4afe27
-		summarizeBy: sum
-		sourceColumn: CurrMonthCounter
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column ProfitCenterID
-		dataType: string
-		lineageTag: 2cdac108-c332-42dd-916e-95a9155b6aec
-		summarizeBy: none
-		sourceColumn: ProfitCenterID
-
-		annotation SummarizationSetBy = Automatic
-
 	column GPDeadNetBudget
 		dataType: double
 		lineageTag: 35bf3d04-4f28-4f81-8b7d-62c83a59f9d5
@@ -127,19 +101,19 @@ table V_Fact_FB_Topline_Budget_All
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column BranchNationalChain
+	column SalesGroupID
 		dataType: string
-		lineageTag: 09b694d7-4929-4d6a-b74d-83770a9f4d8a
+		lineageTag: 06520a6b-74c4-467f-a89d-d2298a6e6de3
 		summarizeBy: none
-		sourceColumn: BranchNationalChain
+		sourceColumn: SalesGroupID
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProfitCenter
+	column SalesGroupLocalChain
 		dataType: string
-		lineageTag: 2e24dd68-8e46-4ca6-9d0a-e04b5f343b7b
+		lineageTag: 74f3cd7e-4620-4ae7-9a09-16285d7ae37e
 		summarizeBy: none
-		sourceColumn: ProfitCenter
+		sourceColumn: SalesGroupLocalChain
 
 		annotation SummarizationSetBy = Automatic
 
@@ -150,7 +124,7 @@ table V_Fact_FB_Topline_Budget_All
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
 				    SOLUTIONS_DEV_Database = Source{[Name=Snowflake_DataBase,Kind="Database"]}[Data],
 				    DSD_Schema = SOLUTIONS_DEV_Database{[Name=Snowflake_Schema,Kind="Schema"]}[Data],
-				    Fact = DSD_Schema{[Name="V_Fact_FB_ToplineBudget_Summary",Kind="View"]}[Data],
+				    Fact = DSD_Schema{[Name="V_Fact_FB_ToplineBudget_Summary_SG",Kind="View"]}[Data],
 					Filtered = Table.SelectRows(Fact, each [PeriodEnd] >= Range_Start and [PeriodEnd] <= Range_End)
 				in
 				    Filtered
