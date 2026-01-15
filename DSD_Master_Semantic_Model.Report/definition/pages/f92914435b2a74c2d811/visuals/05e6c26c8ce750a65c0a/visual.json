@@ -441,6 +441,19 @@
             "metadata": "Measure Table.Conditional_Volume AttainmentSelected"
           }
         }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

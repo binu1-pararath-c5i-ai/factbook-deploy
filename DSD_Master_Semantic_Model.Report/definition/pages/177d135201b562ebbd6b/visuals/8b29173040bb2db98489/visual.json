@@ -2,14 +2,14 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "8b29173040bb2db98489",
   "position": {
-    "x": 590.79024806745235,
-    "y": 454.64619513013253,
+    "x": 1034.8598314649239,
+    "y": 399.07169548707242,
     "z": 10004,
-    "height": 264.79393782304419,
-    "width": 302.26477808102214
+    "height": 69.403773128186515,
+    "width": 245.39191213180231
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
@@ -19,33 +19,49 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "V_Fact_FB_Topline_Budget_All"
+                      "Entity": "V_Dim_FB_NationalChain"
                     }
                   },
                   "Property": "NationalChainName"
                 }
               },
-              "queryRef": "V_Fact_FB_Topline_Budget_All.NationalChainName",
-              "nativeQueryRef": "NationalChainName"
+              "queryRef": "V_Dim_FB_NationalChain.NationalChainName",
+              "nativeQueryRef": "NationalChainName",
+              "active": true
             }
           ]
         }
       }
     },
     "objects": {
-      "columnWidth": [
+      "data": [
         {
           "properties": {
-            "value": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "228.77430665178431D"
+                  "Value": "'Dropdown'"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "V_Fact_FB_Topline_Budget_All.NationalChainName"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]

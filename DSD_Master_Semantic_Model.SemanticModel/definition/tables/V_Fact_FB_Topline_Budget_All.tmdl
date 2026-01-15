@@ -1,14 +1,6 @@
 table V_Fact_FB_Topline_Budget_All
 	lineageTag: 9d532829-e432-471d-81cb-65df83d6bf8f
 
-	column ItemID
-		dataType: string
-		lineageTag: 1ce0275f-47b6-4c9b-bdf2-510d9023b732
-		summarizeBy: none
-		sourceColumn: ItemID
-
-		annotation SummarizationSetBy = Automatic
-
 	column NationalChainName
 		dataType: string
 		lineageTag: 9595749e-38d0-4448-8126-f1f7c9383f46
@@ -98,6 +90,16 @@ table V_Fact_FB_Topline_Budget_All
 		sourceColumn: SalesGroupID
 
 		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: double
+		lineageTag: 9e08b33f-b0b7-409f-b5a5-9be0a3b9007c
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition V_Fact_FB_Topline_Budget_All = m
 		mode: import

@@ -49,14 +49,6 @@ table V_FACT_FB_OPS_CFR
 
 		annotation SummarizationSetBy = Automatic
 
-	column DistributionChannel
-		dataType: string
-		lineageTag: d529130f-94b0-46f2-a760-730de383b61d
-		summarizeBy: none
-		sourceColumn: DistributionChannel
-
-		annotation SummarizationSetBy = Automatic
-
 	column Cuts = V_FACT_FB_OPS_CFR[CasesOrdered]-V_FACT_FB_OPS_CFR[AdjOrderQty]
 		lineageTag: 6527b565-a054-4b2a-8fa2-96259af17d13
 		summarizeBy: sum
@@ -64,14 +56,6 @@ table V_FACT_FB_OPS_CFR
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column Package3Trademark
-		dataType: string
-		lineageTag: ab56548e-09f7-4f83-9090-2374cb56163d
-		summarizeBy: none
-		sourceColumn: Package3Trademark
-
-		annotation SummarizationSetBy = Automatic
 
 	column BranchID
 		dataType: string
@@ -102,6 +86,16 @@ table V_FACT_FB_OPS_CFR
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: double
+		lineageTag: ddc87a43-901a-44f1-97af-6113c623b7f8
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition V_FACT_FB_OPS_CFR = m
 		mode: import

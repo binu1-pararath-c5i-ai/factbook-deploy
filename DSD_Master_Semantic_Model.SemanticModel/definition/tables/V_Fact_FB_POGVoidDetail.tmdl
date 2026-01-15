@@ -17,22 +17,6 @@ table V_Fact_FB_POGVoidDetail
 
 		annotation SummarizationSetBy = Automatic
 
-	column ItemID
-		dataType: string
-		lineageTag: 124cfaaa-536f-4418-9210-1251459c87d7
-		summarizeBy: none
-		sourceColumn: ItemID
-
-		annotation SummarizationSetBy = Automatic
-
-	column ItemDesc
-		dataType: string
-		lineageTag: 2e5b5d02-21ff-43b1-9ba2-561c6aa70b78
-		summarizeBy: none
-		sourceColumn: ItemDesc
-
-		annotation SummarizationSetBy = Automatic
-
 	column SalesGroupID
 		dataType: string
 		lineageTag: ea3cd1bf-4798-4402-801e-aa9628f65f56
@@ -59,22 +43,6 @@ table V_Fact_FB_POGVoidDetail
 		lineageTag: d0a1681a-4abc-45a7-a9e8-462df0a07f10
 		summarizeBy: none
 		sourceColumn: LocalChainId
-
-		annotation SummarizationSetBy = Automatic
-
-	column PkgTypeID
-		dataType: string
-		lineageTag: aa64008c-7f9c-4cc6-9105-941aba8b97a0
-		summarizeBy: none
-		sourceColumn: PkgTypeID
-
-		annotation SummarizationSetBy = Automatic
-
-	column PkgConfigID
-		dataType: string
-		lineageTag: e6c865e8-cde3-4f3a-8430-a2c0e016d890
-		summarizeBy: none
-		sourceColumn: PkgConfigID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -130,24 +98,6 @@ table V_Fact_FB_POGVoidDetail
 
 		annotation SummarizationSetBy = Automatic
 
-	column SystemName
-		dataType: string
-		lineageTag: b9fba000-5fd2-46bc-b02c-fa67928839f2
-		summarizeBy: none
-		sourceColumn: SystemName
-
-		annotation SummarizationSetBy = Automatic
-
-	column SystemID
-		dataType: double
-		lineageTag: 26699974-8506-422a-913a-216d2ce4bf79
-		summarizeBy: count
-		sourceColumn: SystemID
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column IsDSSVoid
 		dataType: int64
 		formatString: #,0
@@ -197,16 +147,6 @@ table V_Fact_FB_POGVoidDetail
 		annotation UnderlyingDateTimeDataType = Date
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
-	column TotalPOG
-		dataType: double
-		lineageTag: 35cf38a8-3271-484a-98f3-5a71e93dd60a
-		summarizeBy: sum
-		sourceColumn: TotalPOG
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Starting_ISO
 		dataType: dateTime
@@ -275,6 +215,16 @@ table V_Fact_FB_POGVoidDetail
 		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: double
+		lineageTag: 0ec45c8e-aff4-44e0-9229-e78bd28e348c
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition V_Fact_FB_POGVoidDetail = m
 		mode: import

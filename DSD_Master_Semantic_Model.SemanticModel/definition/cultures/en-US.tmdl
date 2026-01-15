@@ -27081,58 +27081,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_dim_FB_prod_heir.item_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Dim_FB_ProdHeir",
-			          "ConceptualProperty": "ItemID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "item ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ItemID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "item": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_dim_FB_prod_heir.item_desc": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Dim_FB_ProdHeir",
-			          "ConceptualProperty": "ItemDesc"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "item desc": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ItemDesc": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "V_dim_FB_prod_heir.trade_mark_ID": {
 			      "Definition": {
 			        "Binding": {
@@ -27299,52 +27247,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_dim_FB_prod_heir.status_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Dim_FB_ProdHeir",
-			          "ConceptualProperty": "StatusID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "status ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "StatusID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "V_dim_FB_prod_heir.status_desc": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Dim_FB_ProdHeir",
-			          "ConceptualProperty": "StatusDesc"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "status desc": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "StatusDesc": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "V_dim_FB_prod_heir.pkg_version_ID": {
 			      "Definition": {
 			        "Binding": {
@@ -27384,70 +27286,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "PkgVersionDesc": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "V_dim_FB_prod_heir.cat_segment_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Dim_FB_ProdHeir",
-			          "ConceptualProperty": "CatSegmentID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "cat segment ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CatSegmentID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "segment": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "cat segment": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "segment ID": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_dim_FB_prod_heir.cat_segment_desc": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Dim_FB_ProdHeir",
-			          "ConceptualProperty": "CatSegmentDesc"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "cat segment desc": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CatSegmentDesc": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -27690,29 +27528,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "RMMPOPPackageDesc": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "V_dim_FB_prod_heir.RMMPOP_package_type": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Dim_FB_ProdHeir",
-			          "ConceptualProperty": "RMMPOPPackageType"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "RMMPOP package type": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "RMMPOPPackageType": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -34115,38 +33930,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_topline_budget_all.item_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Topline_Budget_All",
-			          "ConceptualProperty": "ItemID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "item ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ItemID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "item": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_topline_budget_all.national_chain_name": {
 			      "Definition": {
 			        "Binding": {
@@ -35127,71 +34910,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_POG_void_detail.item_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_POGVoidDetail",
-			          "ConceptualProperty": "ItemID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "item ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ItemID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "item": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_POG_void_detail.item_desc": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_POGVoidDetail",
-			          "ConceptualProperty": "ItemDesc"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "item desc": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ItemDesc": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "SKU": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_POG_void_detail.sales_group_ID": {
 			      "Definition": {
 			        "Binding": {
@@ -35308,52 +35026,6 @@ cultureInfo en-US
 			          "chain id": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_POG_void_detail.pkg_type_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_POGVoidDetail",
-			          "ConceptualProperty": "PkgTypeID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pkg type ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "PkgTypeID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_POG_void_detail.pkg_config_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_POGVoidDetail",
-			          "ConceptualProperty": "PkgConfigID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pkg config ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "PkgConfigID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -35520,64 +35192,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "item type": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_POG_void_detail.system_name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_POGVoidDetail",
-			          "ConceptualProperty": "SystemName"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "system name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "SystemName": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "system": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_POG_void_detail.system_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_POGVoidDetail",
-			          "ConceptualProperty": "SystemID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "system ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "SystemID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "system": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -35886,35 +35500,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "parameter 3": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_POG_void_detail.total_POG": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_POGVoidDetail",
-			          "ConceptualProperty": "TotalPOG"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total POG": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "TotalPOG": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "POG": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -39712,38 +39297,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_topline_actuals_summary.item_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_ToplineActuals_Summary",
-			          "ConceptualProperty": "ItemID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "item ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ItemID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "item": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_rev_detail.refusal_reason_new": {
 			      "Definition": {
 			        "Binding": {
@@ -40861,35 +40414,6 @@ cultureInfo en-US
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "v_fact_fb_ops_cfr.distribution_channel": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_FACT_FB_OPS_CFR",
-			          "ConceptualProperty": "DistributionChannel"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "distribution channel": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "DistributionChannel": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "channel": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]
@@ -46564,64 +46088,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_ops_deliveryorder.business_unit_name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Ops_Deliveryorder",
-			          "ConceptualProperty": "BusinessUnitName"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "business unit name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "BusinessUnitName": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "unit": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "unit name": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_ops_deliveryorder.region_name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Ops_Deliveryorder",
-			          "ConceptualProperty": "RegionName"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "region name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "RegionName": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_ops_deliveryorder.territory_name": {
 			      "Definition": {
 			        "Binding": {
@@ -46718,58 +46184,6 @@ cultureInfo en-US
 			        {
 			          "month": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_ops_deliveryorder.item_number": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Ops_Deliveryorder",
-			          "ConceptualProperty": "ItemNumber"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "item number": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ItemNumber": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_ops_deliveryorder.customer_number": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Ops_Deliveryorder",
-			          "ConceptualProperty": "CustomerNumber"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "customer number": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CustomerNumber": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -47586,38 +47000,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "v_fact_fb_ops_cfr.package_3_trademark": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_FACT_FB_OPS_CFR",
-			          "ConceptualProperty": "Package3Trademark"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "package 3 trademark": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Package3Trademark": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "3 trademark": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]

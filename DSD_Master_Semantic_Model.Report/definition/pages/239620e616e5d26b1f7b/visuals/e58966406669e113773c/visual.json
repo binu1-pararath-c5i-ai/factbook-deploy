@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "e58966406669e113773c",
   "position": {
-    "x": 32.223180380943738,
-    "y": 319.75309762628785,
+    "x": 0,
+    "y": 350.73692491565686,
     "z": 1000,
-    "height": 378.00269293030152,
-    "width": 1129.0506664246057,
+    "height": 369.32722128927821,
+    "width": 851.43557391185948,
     "tabOrder": 2000
   },
   "visual": {
@@ -163,20 +163,6 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Previous Month Name"
-                }
-              },
-              "queryRef": "Measure Table.Previous Month Name",
-              "nativeQueryRef": "Previous Month Name"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
                   "Property": "%Rolled_stops_num"
                 }
               },
@@ -250,7 +236,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "51.82365475736118D"
+                  "Value": "59.286679996659714D"
                 }
               }
             }
@@ -278,20 +264,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "183.25573388101256D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Measure Table.Previous Month Name"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "71.54334798416828D"
                 }
               }
@@ -306,7 +278,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "68.08120547272654D"
+                  "Value": "75.50913360274555D"
                 }
               }
             }

@@ -1,22 +1,6 @@
 table V_Dim_FB_ProdHeir
 	lineageTag: 31929968-2fae-440e-8ddf-e22f1005180c
 
-	column ItemID
-		dataType: string
-		lineageTag: d6e02abb-7722-4172-a5d6-8a7271add316
-		summarizeBy: none
-		sourceColumn: ItemID
-
-		annotation SummarizationSetBy = Automatic
-
-	column ItemDesc
-		dataType: string
-		lineageTag: 236c42a0-fc6b-43bb-83da-2abfea024a10
-		summarizeBy: none
-		sourceColumn: ItemDesc
-
-		annotation SummarizationSetBy = Automatic
-
 	column TradeMarkID
 		dataType: string
 		lineageTag: 316085e9-5b4d-408a-bb6b-f0dbdbac309d
@@ -65,22 +49,6 @@ table V_Dim_FB_ProdHeir
 
 		annotation SummarizationSetBy = Automatic
 
-	column StatusID
-		dataType: string
-		lineageTag: ff5f4850-140f-4fcb-a92b-7894e09c5bda
-		summarizeBy: none
-		sourceColumn: StatusID
-
-		annotation SummarizationSetBy = Automatic
-
-	column StatusDesc
-		dataType: string
-		lineageTag: 597642f1-567c-42a9-b1e9-38e4e21d6eed
-		summarizeBy: none
-		sourceColumn: StatusDesc
-
-		annotation SummarizationSetBy = Automatic
-
 	column PkgVersionID
 		dataType: string
 		lineageTag: 8f2d8af6-7171-4b18-a450-0365df52452e
@@ -94,22 +62,6 @@ table V_Dim_FB_ProdHeir
 		lineageTag: e6547c95-13f1-4002-88b7-a25fd9db5964
 		summarizeBy: none
 		sourceColumn: PkgVersionDesc
-
-		annotation SummarizationSetBy = Automatic
-
-	column CatSegmentID
-		dataType: string
-		lineageTag: 2b16dca9-2f54-42ea-b564-200291d211b9
-		summarizeBy: none
-		sourceColumn: CatSegmentID
-
-		annotation SummarizationSetBy = Automatic
-
-	column CatSegmentDesc
-		dataType: string
-		lineageTag: 604fae25-a09b-43cb-b62e-97d85bc312de
-		summarizeBy: none
-		sourceColumn: CatSegmentDesc
 
 		annotation SummarizationSetBy = Automatic
 
@@ -177,25 +129,35 @@ table V_Dim_FB_ProdHeir
 
 		annotation SummarizationSetBy = Automatic
 
-	column RMMPOPPackageType
-		dataType: string
-		lineageTag: ae7053dd-f112-419b-9e0a-10cd85c72357
-		summarizeBy: none
-		sourceColumn: RMMPOPPackageType
-
-		annotation SummarizationSetBy = Automatic
-
 	column Package3Trademark_cfr = V_Dim_FB_ProdHeir[PackageHierarchyLevel3]&"-"&V_Dim_FB_ProdHeir[TradeMarkID]
 		lineageTag: 1a854599-f76b-433c-912a-ae3ae2fd74ae
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
-	column Package3Trademark
-		dataType: string
-		lineageTag: be2e06af-d3b4-4e18-a7ab-235abf7399da
+	column ProductKey
+		dataType: double
+		lineageTag: 0baf2314-6a96-4850-b506-33e304defbc3
 		summarizeBy: none
-		sourceColumn: Package3Trademark
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CMAProductKey
+		dataType: string
+		lineageTag: 440607e6-4a8e-4a5f-8e73-3bd7f55f4939
+		summarizeBy: none
+		sourceColumn: CMAProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevProductKey
+		dataType: string
+		lineageTag: d1f1c73c-905f-4979-bedd-0f19666b662e
+		summarizeBy: none
+		sourceColumn: RevProductKey
 
 		annotation SummarizationSetBy = Automatic
 
@@ -236,7 +198,7 @@ table V_Dim_FB_ProdHeir
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
 				    SOLUTIONS_DEV_Database = Source{[Name=Snowflake_DataBase,Kind="Database"]}[Data],
 				    DSD_Schema = SOLUTIONS_DEV_Database{[Name=Snowflake_Schema,Kind="Schema"]}[Data],
-				    V_Dim_FB_ProdHeir_View = DSD_Schema{[Name="V_Dim_FB_ProdHeir",Kind="View"]}[Data]
+				    V_Dim_FB_ProdHeir_View = DSD_Schema{[Name="V_Dim_FB_Product",Kind="View"]}[Data]
 				in
 				    V_Dim_FB_ProdHeir_View
 

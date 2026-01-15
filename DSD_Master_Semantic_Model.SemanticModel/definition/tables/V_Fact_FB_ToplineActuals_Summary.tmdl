@@ -47,14 +47,6 @@ table V_Fact_FB_ToplineActuals_Summary
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column ItemID
-		dataType: string
-		lineageTag: c1864bdf-e524-446c-9c19-4a4042307b5f
-		summarizeBy: none
-		sourceColumn: ItemID
-
-		annotation SummarizationSetBy = Automatic
-
 	column NationalChainName
 		dataType: string
 		lineageTag: 1627f0ef-8f07-4d9a-b33b-bdf062bf6019
@@ -62,6 +54,16 @@ table V_Fact_FB_ToplineActuals_Summary
 		sourceColumn: NationalChainName
 
 		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: double
+		lineageTag: 2cb9c125-c129-414f-afe7-2c58cd3a716f
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition V_Fact_FB_ToplineActuals_Summary = m
 		mode: import

@@ -178,6 +178,19 @@
             "metadata": "Measure Table.Volume_Bar_Act"
           }
         }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

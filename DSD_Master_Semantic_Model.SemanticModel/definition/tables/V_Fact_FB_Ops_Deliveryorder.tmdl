@@ -1,22 +1,6 @@
 table V_Fact_FB_Ops_Deliveryorder
 	lineageTag: 0aed85cb-d06a-4e4e-b175-b02903d1fc4b
 
-	column BusinessUnitName
-		dataType: string
-		lineageTag: bdf88c0d-5a9b-448b-a49a-30c490d7e1c2
-		summarizeBy: none
-		sourceColumn: BusinessUnitName
-
-		annotation SummarizationSetBy = Automatic
-
-	column RegionName
-		dataType: string
-		lineageTag: 9aca2158-0a3b-47e6-9e95-c0859ce4469c
-		summarizeBy: none
-		sourceColumn: RegionName
-
-		annotation SummarizationSetBy = Automatic
-
 	column TerritoryName
 		dataType: string
 		lineageTag: 5efe5556-8756-439a-a224-0e0aae4dcd4d
@@ -48,22 +32,6 @@ table V_Fact_FB_Ops_Deliveryorder
 		lineageTag: ab5cbab1-a9e9-4f58-85df-84594523e9b2
 		summarizeBy: none
 		sourceColumn: Month
-
-		annotation SummarizationSetBy = Automatic
-
-	column ItemNumber
-		dataType: string
-		lineageTag: 71cfe741-7ed3-4b61-8562-69269597769c
-		summarizeBy: none
-		sourceColumn: ItemNumber
-
-		annotation SummarizationSetBy = Automatic
-
-	column CustomerNumber
-		dataType: string
-		lineageTag: 29942728-db60-494d-868c-8a5e3d3131a5
-		summarizeBy: none
-		sourceColumn: CustomerNumber
 
 		annotation SummarizationSetBy = Automatic
 

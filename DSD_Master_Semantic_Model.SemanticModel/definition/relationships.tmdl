@@ -39,17 +39,9 @@ relationship 1f314348-78d3-dc04-2d3a-24c8ef9a1c24
 	fromColumn: V_Dim_FB_CalDay.MonthID
 	toColumn: Distinct_MonthID.MonthID
 
-relationship 11004f47-5532-39cf-8b66-8025aa43749e
-	fromColumn: V_Fact_FB_Topline_Budget_All.ItemID
-	toColumn: V_Dim_FB_ProdHeir.ItemID
-
 relationship 4a7e50d2-baa8-af06-aec2-350f0fca5a0a
 	fromColumn: V_Fact_FB_POGVoidDetail.RouteID
 	toColumn: V_Dim_RouteSalesCustHeir.RouteID
-
-relationship 01f1abbe-1d0e-3b5d-d70b-78ab4b75adc7
-	fromColumn: V_Fact_FB_POGVoidDetail.ItemID
-	toColumn: V_Dim_FB_ProdHeir.ItemID
 
 relationship 72662204-0af9-0090-5d4a-8d7c0c3e4880
 	fromColumn: V_Fact_FB_RevDetail.RouteID
@@ -62,10 +54,6 @@ relationship dcccd926-e771-5343-e592-475bec4e974d
 relationship 85347b28-c3e9-71f0-f554-aa4e108dfe01
 	fromColumn: V_Fact_FB_Topline_Budget_All.PeriodEnd
 	toColumn: V_Dim_FB_CalDay.DayDate
-
-relationship 2567b3e3-4e4a-6231-9d6b-df717299787a
-	fromColumn: V_Fact_FB_ToplineActuals_Summary.ItemID
-	toColumn: V_Dim_FB_ProdHeir.ItemID
 
 relationship 4a24c7f8-5765-85d0-20c9-f8e409b77e89
 	fromColumn: V_FACT_FB_OPS_ROLLEDSTOP.SalesRouteNumber
@@ -98,15 +86,6 @@ relationship 15ce58d7-09a5-aac9-7db1-3519f61f1a2f
 	fromColumn: V_Fact_FB_Ops_Deliveryorder.TerritoryName
 	toColumn: V_Dim_FB_RptBranchHier.TerritoryName
 
-relationship 003ebc94-1b07-1aeb-e86f-d8bdc5d94f54
-	fromColumn: V_Fact_FB_Ops_Deliveryorder.ItemNumber
-	toColumn: V_Dim_FB_ProdHeir.ItemID
-
-relationship f5a3ac0d-9e04-ac06-aeac-c1c2d69e0f72
-	toCardinality: many
-	fromColumn: V_Fact_FB_Ops_Deliveryorder.CustomerNumber
-	toColumn: V_Dim_FB_CustChainHeir.CustomerNumber
-
 relationship 805bcca6-d1d8-558a-524b-2359b12a6714
 	crossFilteringBehavior: bothDirections
 	fromColumn: V_Dim_FB_CustChainHeir.CustomerNumber
@@ -121,11 +100,6 @@ relationship 8e5c7ce9-7ebf-5275-3538-0de69bee6dd0
 	crossFilteringBehavior: bothDirections
 	fromColumn: V_Dim_FB_SalesHier.BranchID
 	toColumn: V_Dim_FB_SalesHier_Distinct.BranchID
-
-relationship b92375e8-400c-87df-14d6-38f794614f93
-	toCardinality: many
-	fromColumn: V_FACT_FB_OPS_CFR.Package3Trademark
-	toColumn: V_Dim_FB_ProdHeir.Package3Trademark_cfr
 
 relationship f157af1a-52b4-3452-0df8-fbae1df9cf40
 	toCardinality: many
@@ -230,4 +204,20 @@ relationship 35d28f6c-5aee-8b9a-20c6-a82af730c361
 relationship 4eab08aa-2bf0-c989-accf-9b450f2b48eb
 	fromColumn: V_Fact_FB_ToplineActuals_Summary.NationalChainName
 	toColumn: V_Dim_FB_NationalChain.NationalChainName
+
+relationship 40a5cd68-c8c0-19c4-28fa-2a4c00b56507
+	fromColumn: V_Fact_FB_ToplineActuals_Summary.ProductKey
+	toColumn: V_Dim_FB_ProdHeir.ProductKey
+
+relationship 601e5578-a0bf-3104-e787-3a553da9e095
+	fromColumn: V_Fact_FB_Topline_Budget_All.ProductKey
+	toColumn: V_Dim_FB_ProdHeir.ProductKey
+
+relationship 02bf6543-e454-87ff-91f1-6dea9129dd35
+	fromColumn: V_Fact_FB_POGVoidDetail.ProductKey
+	toColumn: V_Dim_FB_ProdHeir.ProductKey
+
+relationship 9394d7c1-fe35-5c7d-adab-610cfe767804
+	fromColumn: V_FACT_FB_OPS_CFR.ProductKey
+	toColumn: V_Dim_FB_ProdHeir.ProductKey
 

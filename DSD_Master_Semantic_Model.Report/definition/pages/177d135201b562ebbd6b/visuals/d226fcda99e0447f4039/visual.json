@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "d226fcda99e0447f4039",
   "position": {
-    "x": 592.03927607605169,
-    "y": 12.490280085992651,
+    "x": 592.41077777273483,
+    "y": 0,
     "z": 8000,
-    "height": 154.87947306630889,
-    "width": 508.35439949990092,
+    "height": 334.625334725185,
+    "width": 477.1509402562823,
     "tabOrder": 9000
   },
   "visual": {
@@ -96,7 +96,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "104.50972154168534D"
+                  "Value": "109.49085439565572D"
                 }
               }
             }
@@ -145,6 +145,20 @@
           },
           "selector": {
             "metadata": "Measure Table.Revenue_TL"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "85.97358551638206D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Operation_Cal_Day.FirstDayOfMonth"
           }
         }
       ],
