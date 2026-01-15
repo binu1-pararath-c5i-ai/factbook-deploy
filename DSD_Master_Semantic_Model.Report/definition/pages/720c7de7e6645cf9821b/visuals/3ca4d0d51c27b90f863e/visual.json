@@ -4,7 +4,7 @@
   "position": {
     "x": 1192.2617625985192,
     "y": 286.14282302364461,
-    "z": 5000,
+    "z": 4000,
     "height": 96.603773584905667,
     "width": 88.0439455457368
   },
@@ -129,23 +129,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e77f51b8a00d81459fdd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metric Table"
-              }
-            },
-            "Property": "Metrics"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c8985e9363bd9006988c",
+  "name": "e44340c4c50a3ed9a808",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 8000,
-    "height": 61.967654578737957,
-    "width": 136.32884007322352
+    "x": 770.6502813057466,
+    "y": 302.26477808102214,
+    "z": 10000,
+    "height": 69.945568481558851,
+    "width": 264.79393782304419,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -19,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "V_Dim_FB_CustChainHeir"
+                      "Entity": "V_Dim_FB_SalesHier"
                     }
                   },
-                  "Property": "BranchName"
+                  "Property": "SalesGroupName"
                 }
               },
-              "queryRef": "V_Dim_FB_CustChainHeir.BranchName",
-              "nativeQueryRef": "BranchName",
+              "queryRef": "V_Dim_FB_SalesHier.SalesGroupName",
+              "nativeQueryRef": "SalesGroupName",
               "active": true
             }
           ]
@@ -49,7 +50,28 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     },

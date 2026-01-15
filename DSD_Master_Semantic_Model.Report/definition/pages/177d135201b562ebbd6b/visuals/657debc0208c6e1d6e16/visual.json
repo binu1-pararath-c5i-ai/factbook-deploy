@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c8985e9363bd9006988c",
+  "name": "657debc0208c6e1d6e16",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 8000,
-    "height": 61.967654578737957,
-    "width": 136.32884007322352
+    "x": 1024.2029670513973,
+    "y": 374.70840257977954,
+    "z": 10002,
+    "height": 69.945568481558851,
+    "width": 256.05074176284933
   },
   "visual": {
     "visualType": "slicer",
@@ -22,15 +22,32 @@
                       "Entity": "V_Dim_FB_CustChainHeir"
                     }
                   },
-                  "Property": "BranchName"
+                  "Property": "NationalChainName"
                 }
               },
-              "queryRef": "V_Dim_FB_CustChainHeir.BranchName",
-              "nativeQueryRef": "BranchName",
+              "queryRef": "V_Dim_FB_CustChainHeir.NationalChainName",
+              "nativeQueryRef": "NationalChainName",
               "active": true
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_CustChainHeir"
+                  }
+                },
+                "Property": "NationalChainName"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {

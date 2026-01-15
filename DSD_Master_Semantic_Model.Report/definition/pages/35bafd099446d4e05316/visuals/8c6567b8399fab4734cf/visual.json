@@ -166,23 +166,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "225890b1ee0c72086e9c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Act/VolAdj Table"
-              }
-            },
-            "Property": "Act/VolAdj"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "68ab301105eee69e7a91",
+  "name": "8b29173040bb2db98489",
   "position": {
-    "x": 972.97146935563569,
-    "y": 38.978826199147193,
-    "z": 8000,
-    "height": 196.39331661878006,
-    "width": 83.954394890470866,
-    "tabOrder": 8000
+    "x": 590.79024806745235,
+    "y": 454.64619513013253,
+    "z": 10004,
+    "height": 264.79393782304419,
+    "width": 302.26477808102214
   },
   "visual": {
     "visualType": "tableEx",
@@ -17,17 +16,17 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Measure Table"
+                      "Entity": "V_Fact_FB_Topline_Budget_All"
                     }
                   },
-                  "Property": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar"
+                  "Property": "NationalChainName"
                 }
               },
-              "queryRef": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar",
-              "nativeQueryRef": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar"
+              "queryRef": "V_Fact_FB_Topline_Budget_All.NationalChainName",
+              "nativeQueryRef": "NationalChainName"
             }
           ]
         }
@@ -40,13 +39,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "65.53588315400263D"
+                  "Value": "228.77430665178431D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Measure Table.Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPH_Selection_Ops_Bar"
+            "metadata": "V_Fact_FB_Topline_Budget_All.NationalChainName"
           }
         }
       ]

@@ -3,10 +3,10 @@
   "name": "c5c351f57e34d88ad56b",
   "position": {
     "x": 0,
-    "y": 21.074362890907629,
+    "y": 0,
     "z": 5000,
-    "height": 230.5008441193022,
-    "width": 590.08216094541365,
+    "height": 214.83281747907361,
+    "width": 487.12092335371341,
     "tabOrder": 1000
   },
   "visual": {
@@ -415,48 +415,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "151c219180d7bd471d30",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Revenue_Bar_Actual_TL"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "738c43a50adde5dc9863",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Revenue_Bar_AOP_FCST_YA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "11d296c6cc5d868448b6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Revenue_FCST topline bar"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "d226fcda99e0447f4039",
   "position": {
-    "x": 726.26091166280889,
-    "y": 45.856064388266091,
-    "z": 7001,
-    "height": 256.54608995597516,
-    "width": 138.80754625637303
+    "x": 592.03927607605169,
+    "y": 12.490280085992651,
+    "z": 8000,
+    "height": 154.87947306630889,
+    "width": 508.35439949990092,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "tableEx",
@@ -22,51 +23,145 @@
                       "Entity": "Operation_Cal_Day"
                     }
                   },
-                  "Property": "DayDate"
+                  "Property": "FirstDayOfMonth"
                 }
               },
-              "queryRef": "Operation_Cal_Day.DayDate",
-              "nativeQueryRef": "DayDate"
+              "queryRef": "Operation_Cal_Day.FirstDayOfMonth",
+              "nativeQueryRef": "FirstDayOfMonth"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Volume_AOP_TL"
+                }
+              },
+              "queryRef": "Measure Table.Volume_AOP_TL",
+              "nativeQueryRef": "Volume_AOP_TL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Revenue_AOP_TL"
+                }
+              },
+              "queryRef": "Measure Table.Revenue_AOP_TL",
+              "nativeQueryRef": "Revenue_AOP_TL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Volume_TL"
+                }
+              },
+              "queryRef": "Measure Table.Volume_TL",
+              "nativeQueryRef": "Volume_TL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Revenue_TL"
+                }
+              },
+              "queryRef": "Measure Table.Revenue_TL",
+              "nativeQueryRef": "Revenue_TL"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Operation_Cal_Day"
-                  }
-                },
-                "Property": "DayDate"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
-    "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "88a58a22a248c52f5bc8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Operation_Cal_Day"
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104.50972154168534D"
+                }
               }
-            },
-            "Property": "DayDate"
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Revenue_AOP_TL"
           }
         },
-        "type": "Categorical"
-      }
-    ]
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.52137590582576D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Volume_AOP_TL"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.0116700731852D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Volume_TL"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.75485549360165D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Revenue_TL"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
   }
 }

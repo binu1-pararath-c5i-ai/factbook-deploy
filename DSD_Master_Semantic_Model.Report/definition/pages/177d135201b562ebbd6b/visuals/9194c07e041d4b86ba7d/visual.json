@@ -3,10 +3,10 @@
   "name": "9194c07e041d4b86ba7d",
   "position": {
     "x": 0,
-    "y": 264.44261659036238,
+    "y": 214.83281747907361,
     "z": 4000,
-    "height": 189.43245130751922,
-    "width": 589.91045239388529,
+    "height": 192.35031332428684,
+    "width": 487.12092335371341,
     "tabOrder": 0
   },
   "visual": {
@@ -338,48 +338,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "b2a17562e057d58967db",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Volume_Bar_Actual_TL"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e783ad2790d4aa016526",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Volume_Bar_AOP_FCST_YA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "33c352248a00c714a7b4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Volume_FCST Topline bar"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -30021,29 +30021,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_topline_actuals_summary.month_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_ToplineActuals_Summary",
-			          "ConceptualProperty": "MonthID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "month ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MonthID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_topline_actuals_summary.sales_group_ID": {
 			      "Definition": {
 			        "Binding": {
@@ -30090,96 +30067,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "group ID": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_topline_actuals_summary.sales_group_name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_ToplineActuals_Summary",
-			          "ConceptualProperty": "SalesGroupName"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales group name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sale group name": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "SalesGroupName": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "sales group": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "sale group": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.7566
-			          }
-			        },
-			        {
-			          "group name": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_topline_actuals_summary.local_chain_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_ToplineActuals_Summary",
-			          "ConceptualProperty": "LocalChainID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "local chain ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "LocalChainID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "chain": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "local chain": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "chain ID": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -34228,29 +34115,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "V_fact_FB_topline_budget_all.month_ID": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_Topline_Budget_All",
-			          "ConceptualProperty": "MonthID"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "month ID": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MonthID": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "V_fact_FB_topline_budget_all.item_ID": {
 			      "Definition": {
 			        "Binding": {
@@ -36820,57 +36684,6 @@ cultureInfo en-US
 			        }
 			      ],
 			      "SemanticType": "Time"
-			    },
-			    "V_fact_FB_topline_actuals_summary.sales_group_local_chain": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_ToplineActuals_Summary",
-			          "ConceptualProperty": "SalesGroupLocalChain"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "sales group local chain": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sale group local chain": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "SalesGroupLocalChain": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "chain": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "local chain": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "group local chain": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
 			    },
 			    "V_dim_FB_cust_chain_heir.sales_group_local_chain": {
 			      "Definition": {
@@ -39895,35 +39708,6 @@ cultureInfo en-US
 			        {
 			          "_Haulback_target FormatString": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "V_fact_FB_topline_actuals_summary.DSC_NC_category": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "V_Fact_FB_ToplineActuals_Summary",
-			          "ConceptualProperty": "DSC_NC_Category"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "DSC NC category": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "DSC_NC_Category": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "NC category": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]

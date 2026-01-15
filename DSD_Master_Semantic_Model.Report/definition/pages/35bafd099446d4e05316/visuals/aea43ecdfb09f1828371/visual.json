@@ -117,23 +117,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7272355507632457bee8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Whse/Delv/Mech Table"
-              }
-            },
-            "Property": "Whse/Delv/Mech"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

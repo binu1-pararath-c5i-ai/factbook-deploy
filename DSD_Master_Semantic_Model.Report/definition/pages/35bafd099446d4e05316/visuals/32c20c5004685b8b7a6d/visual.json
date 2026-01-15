@@ -130,23 +130,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c3a5f5be03a5bdd66852",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metric Table"
-              }
-            },
-            "Property": "Metrics"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

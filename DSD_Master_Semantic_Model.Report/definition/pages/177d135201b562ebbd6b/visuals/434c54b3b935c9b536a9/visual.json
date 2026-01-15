@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "434c54b3b935c9b536a9",
   "position": {
-    "x": 1099.0102316190032,
-    "y": 351.49241850622246,
+    "x": 1100.3936755759526,
+    "y": 0,
     "z": 1000,
-    "height": 76.342244743432929,
-    "width": 168.5891238084144,
+    "height": 66.198484455761047,
+    "width": 179.86003323829419,
     "tabOrder": 4000
   },
   "visual": {
@@ -58,7 +58,7 @@
               },
               "queryRef": "Operation_Cal_Day.L31",
               "nativeQueryRef": "L31",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -76,7 +76,7 @@
                 "Property": "L3"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -143,6 +143,7 @@
                   }
                 }
               ],
+              "isToggled": true,
               "children": [
                 {
                   "identityValues": [
@@ -231,6 +232,26 @@
                               },
                               "Property": "L1"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "o"
+                                }
+                              },
+                              "Property": "L2"
+                            }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "o"
+                                }
+                              },
+                              "Property": "L3"
+                            }
                           }
                         ],
                         "Values": [
@@ -238,6 +259,16 @@
                             {
                               "Literal": {
                                 "Value": "'2025'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'Q4'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "'Dec'"
                               }
                             }
                           ]
@@ -256,6 +287,26 @@
                               },
                               "Property": "L1"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Operation_Cal_Day"
+                                }
+                              },
+                              "Property": "L2"
+                            }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Operation_Cal_Day"
+                                }
+                              },
+                              "Property": "L3"
+                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -266,6 +317,24 @@
                                   {
                                     "Literal": {
                                       "Value": "'2025'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "1": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'Q4'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "2": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'Dec'"
                                     }
                                   }
                                 ]
@@ -284,12 +353,38 @@
                                   "Property": "L1"
                                 }
                               }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Operation_Cal_Day"
+                                    }
+                                  },
+                                  "Property": "L2"
+                                }
+                              }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Operation_Cal_Day"
+                                    }
+                                  },
+                                  "Property": "L3"
+                                }
+                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "2025"
+                            "0": "2025",
+                            "1": "Q4",
+                            "2": "Dec"
                           }
                         ]
                       }
@@ -307,7 +402,7 @@
             "strictSingleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -370,34 +465,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "23fa5a68b395569b8440",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Operation_Cal_Day"
-              }
-            },
-            "Property": "L2"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9c267e81b30871e0412b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Operation_Cal_Day"
-              }
-            },
-            "Property": "L3"
-          }
-        },
-        "type": "Categorical"
       },
       {
         "name": "3ce1ec89d24c2824fc93",

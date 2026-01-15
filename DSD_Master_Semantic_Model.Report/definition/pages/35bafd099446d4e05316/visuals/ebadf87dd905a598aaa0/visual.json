@@ -501,34 +501,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "8758253cad292265760c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Wh_Delv_Mech_CPC_Actuals_VolAdj_Selection_Ops_Bar"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "08abd1600625608ecc6d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Wh_Delv_Mech_AOP_Fcst_YA_Actuals_VolAdj_CPC_Selection_Ops_Bar"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

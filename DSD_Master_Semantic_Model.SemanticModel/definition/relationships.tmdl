@@ -114,8 +114,8 @@ relationship 805bcca6-d1d8-558a-524b-2359b12a6714
 
 relationship e90ad59e-5daf-e1c4-68b7-ef524429be5e
 	toCardinality: many
-	fromColumn: V_Fact_FB_ToplineActuals_Summary.SalesGroupLocalChain
-	toColumn: V_Dim_FB_CustChainHeir.SalesGroupLocalChain
+	fromColumn: V_Fact_FB_ToplineActuals_Summary.SalesGroupID
+	toColumn: V_Dim_FB_CustChainHeir.SalesGroupID
 
 relationship 8e5c7ce9-7ebf-5275-3538-0de69bee6dd0
 	crossFilteringBehavior: bothDirections
@@ -190,34 +190,44 @@ relationship 692e3998-daa6-36ab-1c73-148bd646adc3
 	fromColumn: Operation_Cal_Day.DayDate
 	toColumn: V_Dim_FB_CalDay.DayDate
 
-relationship 3d7e733a-bbe8-8c54-4e4a-0a9235768a99
-	toCardinality: many
+relationship 0cf1b71a-abf0-a72b-40e1-a6125813bdc0
 	fromColumn: V_FACT_FB_OPS_CFR.RequestedDeliveryDate
-	toColumn: Operation_Cal_Day.DayDate
+	toColumn: V_Dim_FB_CalDay.DayDate
 
-relationship 8d5a7254-d9b9-3d5b-2eff-bbc4accaaf72
-	isActive: false
-	toCardinality: many
-	fromColumn: V_FACT_FB_OPS_ROLLEDSTOPORDERS.OriginalOrderRDD
-	toColumn: Operation_Cal_Day.DayDate
-
-relationship ee1d90dc-4602-1c51-20e0-038d759f069f
-	toCardinality: many
-	fromColumn: V_FACT_FB_OPS_ROLLEDSTOP.CalendarDay
-	toColumn: Operation_Cal_Day.DayDate
-
-relationship d8ffb587-bcfe-12af-9bc0-a63579113145
-	toCardinality: many
-	fromColumn: V_Fact_FB_POGVoidDetail.Starting_ISO
-	toColumn: Operation_Cal_Day.DayDate
-
-relationship f8a4f7d8-974b-283e-dbc8-0b8e4038758f
-	toCardinality: many
+relationship fb5eac0b-6718-32df-2a31-f677e1763fd2
 	fromColumn: V_Fact_FB_CMAComplianceSummary.PeriodEnd
-	toColumn: Operation_Cal_Day.DayDate
+	toColumn: V_Dim_FB_CalDay.DayDate
 
-relationship 99481fcb-70a1-d986-cd09-eeb14e739913
-	toCardinality: many
+relationship 1dd64c28-a394-f196-1b8c-8b8bd80fbd26
 	fromColumn: V_Fact_FB_RevDetail.WeekStartDayDate
-	toColumn: Operation_Cal_Day.DayDate
+	toColumn: V_Dim_FB_CalDay.DayDate
+
+relationship be5adb21-be3b-8473-dc71-c55a041f1aa6
+	fromColumn: V_Fact_FB_POGVoidDetail.Starting_ISO
+	toColumn: V_Dim_FB_CalDay.DayDate
+
+relationship e44b46d1-2654-b3e5-68d0-4eef5a8d77b0
+	fromColumn: V_FACT_FB_OPS_ROLLEDSTOP.CalendarDay
+	toColumn: V_Dim_FB_CalDay.DayDate
+
+relationship edae93d8-e7b7-e64e-c5ef-d902de68ea22
+	fromColumn: V_FACT_FB_OPS_ROLLEDSTOPORDERS.OriginalOrderRDD
+	toColumn: V_Dim_FB_CalDay.DayDate
+
+relationship BG_a328e7f7-072a-ed26-681b-e88d646cba45
+	fromColumn: V_Fact_FB_Topline_Budget_All.SalesGroupID
+	toColumn: V_Dim_FB_SalesHier.SalesGroupID
+
+relationship BG_e90ad59e-5daf-e1c4-68b7-ef524429be5e
+	toCardinality: many
+	fromColumn: V_Fact_FB_Topline_Budget_All.SalesGroupID
+	toColumn: V_Dim_FB_CustChainHeir.SalesGroupID
+
+relationship 35d28f6c-5aee-8b9a-20c6-a82af730c361
+	fromColumn: V_Fact_FB_Topline_Budget_All.NationalChainName
+	toColumn: V_Dim_FB_NationalChain.NationalChainName
+
+relationship 4eab08aa-2bf0-c989-accf-9b450f2b48eb
+	fromColumn: V_Fact_FB_ToplineActuals_Summary.NationalChainName
+	toColumn: V_Dim_FB_NationalChain.NationalChainName
 

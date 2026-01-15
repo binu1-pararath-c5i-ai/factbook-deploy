@@ -1,16 +1,6 @@
 table V_Fact_FB_Topline_Budget_All
 	lineageTag: 9d532829-e432-471d-81cb-65df83d6bf8f
 
-	column MonthID
-		dataType: double
-		lineageTag: eb3a5973-1a80-4e4a-bc36-1d19e59decbe
-		summarizeBy: count
-		sourceColumn: MonthID
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		annotation SummarizationSetBy = Automatic
-
 	column ItemID
 		dataType: string
 		lineageTag: 1ce0275f-47b6-4c9b-bdf2-510d9023b732
@@ -106,14 +96,6 @@ table V_Fact_FB_Topline_Budget_All
 		lineageTag: 06520a6b-74c4-467f-a89d-d2298a6e6de3
 		summarizeBy: none
 		sourceColumn: SalesGroupID
-
-		annotation SummarizationSetBy = Automatic
-
-	column SalesGroupLocalChain
-		dataType: string
-		lineageTag: 74f3cd7e-4620-4ae7-9a09-16285d7ae37e
-		summarizeBy: none
-		sourceColumn: SalesGroupLocalChain
 
 		annotation SummarizationSetBy = Automatic
 

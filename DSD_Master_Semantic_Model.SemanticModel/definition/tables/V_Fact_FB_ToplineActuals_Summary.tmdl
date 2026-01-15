@@ -1,37 +1,11 @@
 table V_Fact_FB_ToplineActuals_Summary
 	lineageTag: 0ed7f2e9-b2e1-4f5d-8966-4cdfe99463f4
 
-	column MonthID
-		dataType: double
-		lineageTag: 57c2a9e4-de8f-47ea-bacc-3650a07e9e0c
-		summarizeBy: count
-		sourceColumn: MonthID
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column SalesGroupID
 		dataType: string
 		lineageTag: a2afd1bc-b6d1-4f44-9dc7-0b809cb98c6f
 		summarizeBy: none
 		sourceColumn: SalesGroupID
-
-		annotation SummarizationSetBy = Automatic
-
-	column SalesGroupName
-		dataType: string
-		lineageTag: edeb684d-280e-4b31-8ac3-47faac06867e
-		summarizeBy: none
-		sourceColumn: SalesGroupName
-
-		annotation SummarizationSetBy = Automatic
-
-	column LocalChainID
-		dataType: string
-		lineageTag: 7821aef7-cfff-4b80-8f52-8c73fdb98a3c
-		summarizeBy: none
-		sourceColumn: LocalChainID
 
 		annotation SummarizationSetBy = Automatic
 
@@ -73,14 +47,6 @@ table V_Fact_FB_ToplineActuals_Summary
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column DSC_NC_Category
-		dataType: string
-		lineageTag: a9e4cabd-a3a8-4dd9-b164-1642822c6c38
-		summarizeBy: none
-		sourceColumn: DSC_NC_Category
-
-		annotation SummarizationSetBy = Automatic
-
 	column ItemID
 		dataType: string
 		lineageTag: c1864bdf-e524-446c-9c19-4a4042307b5f
@@ -89,11 +55,11 @@ table V_Fact_FB_ToplineActuals_Summary
 
 		annotation SummarizationSetBy = Automatic
 
-	column SalesGroupLocalChain
+	column NationalChainName
 		dataType: string
-		lineageTag: 91ada066-e247-491d-89d8-5d935037b070
+		lineageTag: 1627f0ef-8f07-4d9a-b33b-bdf062bf6019
 		summarizeBy: none
-		sourceColumn: SalesGroupLocalChain
+		sourceColumn: NationalChainName
 
 		annotation SummarizationSetBy = Automatic
 

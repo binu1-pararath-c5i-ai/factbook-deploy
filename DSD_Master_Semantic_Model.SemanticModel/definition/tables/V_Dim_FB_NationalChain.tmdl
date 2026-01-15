@@ -1,0 +1,26 @@
+table V_Dim_FB_NationalChain
+	lineageTag: 1293a7c5-ac3a-43f4-aa0a-d85554d296eb
+
+	column NationalChainName
+		dataType: string
+		lineageTag: bbe0a938-daf6-4fde-932a-5853d122d775
+		summarizeBy: none
+		sourceColumn: NationalChainName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition V_Dim_FB_NationalChain = m
+		mode: import
+		source =
+				let
+				    Source = V_Dim_FB_CustChainHeir,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"NationalChainName"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    AppendedTable = Table.Combine({#table({"NationalChainName"}, {{" N/A"}}), #"Removed Duplicates"})
+				in
+				    AppendedTable
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

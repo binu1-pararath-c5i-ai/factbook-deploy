@@ -4,7 +4,7 @@
   "position": {
     "x": 1108.603055266736,
     "y": 91.728385187554991,
-    "z": 3000,
+    "z": 2000,
     "height": 65.520275133967843,
     "width": 167.73190434295768
   },
@@ -338,34 +338,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "3d73c43c5e21ffc8ca2c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Operation_Cal_Day"
-              }
-            },
-            "Property": "L2"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0fc4a1948e1bdc071758",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Operation_Cal_Day"
-              }
-            },
-            "Property": "L3"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

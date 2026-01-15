@@ -14575,11 +14575,11 @@ table 'Measure Table'
 		lineageTag: c4917e27-19fa-4d17-84f5-d88da3021e83
 
 	measure IsFiltered_NC_to_SG =
-			
-			ISFILTERED(V_Dim_FB_CustChainHeir[NationalChainName])
-			    || ISFILTERED(V_Dim_FB_CustChainHeir[TerritoryName])
-			    || ISFILTERED(V_Dim_FB_CustChainHeir[BranchName])
-			    || ISFILTERED(V_Dim_FB_CustChainHeir[SalesGroupName])
+			FALSE()
+			// ISFILTERED(V_Dim_FB_CustChainHeir[NationalChainName])
+			//     || ISFILTERED(V_Dim_FB_CustChainHeir[TerritoryName])
+			//     || ISFILTERED(V_Dim_FB_CustChainHeir[BranchName])
+			//     || ISFILTERED(V_Dim_FB_CustChainHeir[SalesGroupName])
 		formatString: """TRUE"";""TRUE"";""FALSE"""
 		lineageTag: fd1eeaea-2abc-40a1-b6b8-bb2061ac760e
 

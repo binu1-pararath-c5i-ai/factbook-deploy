@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c8985e9363bd9006988c",
+  "name": "aa9db2481abe9c893056",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 8000,
-    "height": 61.967654578737957,
-    "width": 136.32884007322352
+    "x": 592.03927607605169,
+    "y": 372.21034656258104,
+    "z": 10003,
+    "height": 69.945568481558851,
+    "width": 149.88336103191182
   },
   "visual": {
     "visualType": "slicer",
@@ -19,14 +19,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "V_Dim_FB_CustChainHeir"
+                      "Entity": "V_Dim_FB_SalesHier"
                     }
                   },
-                  "Property": "BranchName"
+                  "Property": "SalesGroupID"
                 }
               },
-              "queryRef": "V_Dim_FB_CustChainHeir.BranchName",
-              "nativeQueryRef": "BranchName",
+              "queryRef": "V_Dim_FB_SalesHier.SalesGroupID",
+              "nativeQueryRef": "SalesGroupID",
               "active": true
             }
           ]
@@ -50,6 +50,26 @@
       "general": [
         {
           "properties": {}
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     },
