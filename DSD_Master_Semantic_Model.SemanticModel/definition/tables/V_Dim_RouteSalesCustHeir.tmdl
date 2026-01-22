@@ -99,6 +99,7 @@ table V_Dim_RouteSalesCustHeir
 
 	partition V_Dim_RouteSalesCustHeir = m
 		mode: import
+		queryGroup: Dimensions
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),

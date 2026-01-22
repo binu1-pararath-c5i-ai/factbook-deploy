@@ -470,6 +470,7 @@ table V_Fact_FB_CMAComplianceSummary
 
 	partition V_Fact_FB_CMAComplianceSummary = m
 		mode: import
+		queryGroup: Fact-IM
 		source =
 				let
 				

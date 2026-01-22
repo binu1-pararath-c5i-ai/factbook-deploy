@@ -161,6 +161,16 @@ table V_Dim_FB_ProdHeir
 
 		annotation SummarizationSetBy = Automatic
 
+	column IMProductKey
+		dataType: double
+		lineageTag: e23e6227-a1f9-4e94-bd53-594c10a069a3
+		summarizeBy: count
+		sourceColumn: IMProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	hierarchy 'Pack Hierarchy'
 		lineageTag: acbfcd54-dc14-47ab-9df4-2bfbf808b6ef
 
@@ -193,6 +203,7 @@ table V_Dim_FB_ProdHeir
 
 	partition V_Dim_FB_ProdHeir = m
 		mode: import
+		queryGroup: Dimensions
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
@@ -204,5 +215,5 @@ table V_Dim_FB_ProdHeir
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

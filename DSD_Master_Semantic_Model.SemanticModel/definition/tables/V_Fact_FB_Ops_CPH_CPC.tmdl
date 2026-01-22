@@ -1002,6 +1002,7 @@ table V_Fact_FB_Ops_CPH_CPC
 
 	partition V_Fact_FB_Ops_CPH_CPC = m
 		mode: import
+		queryGroup: Fact-Labor
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
@@ -1017,5 +1018,5 @@ table V_Fact_FB_Ops_CPH_CPC
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

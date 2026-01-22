@@ -99,6 +99,7 @@ table V_FACT_FB_OPS_CFR
 
 	partition V_FACT_FB_OPS_CFR = m
 		mode: import
+		queryGroup: Fact-Ops
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
@@ -111,5 +112,5 @@ table V_FACT_FB_OPS_CFR
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

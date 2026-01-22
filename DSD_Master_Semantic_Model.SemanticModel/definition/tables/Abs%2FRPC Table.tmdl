@@ -14,6 +14,7 @@ table 'Abs/RPC Table'
 
 	partition 'Abs/RPC Table' = m
 		mode: import
+		queryGroup: UI
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45Wckwqzs8pLUlVitWJVgoKcFaKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Abs/RPC" = _t]),
@@ -22,4 +23,6 @@ table 'Abs/RPC Table'
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

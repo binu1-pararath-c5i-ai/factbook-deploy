@@ -67,6 +67,7 @@ table V_Fact_FB_ToplineActuals_Summary
 
 	partition V_Fact_FB_ToplineActuals_Summary = m
 		mode: import
+		queryGroup: Fact-Sales
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),

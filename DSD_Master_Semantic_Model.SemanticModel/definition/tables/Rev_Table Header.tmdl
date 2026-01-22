@@ -24,6 +24,7 @@ table 'Rev_Table Header'
 
 	partition 'Rev_Table Header' = m
 		mode: import
+		queryGroup: UI
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WUlUIzs9JUdJRMlSK1QFxnUozc0oUNHzcFPzzcio1gTJGSrGxAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Header = _t, #"Sort order" = _t]),

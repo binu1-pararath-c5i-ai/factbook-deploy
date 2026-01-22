@@ -226,8 +226,17 @@ table V_Fact_FB_POGVoidDetail
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column ItemDesc
+		dataType: string
+		lineageTag: ebc4fa1c-f2f4-4a73-8300-309e85eff088
+		summarizeBy: none
+		sourceColumn: ItemDesc
+
+		annotation SummarizationSetBy = Automatic
+
 	partition V_Fact_FB_POGVoidDetail = m
 		mode: import
+		queryGroup: Fact-IM
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
@@ -240,5 +249,5 @@ table V_Fact_FB_POGVoidDetail
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

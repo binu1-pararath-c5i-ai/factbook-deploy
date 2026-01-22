@@ -408,6 +408,7 @@ table V_Fact_FB_RevDetail
 
 	partition V_Fact_FB_RevDetail = m
 		mode: import
+		queryGroup: Fact-IM
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
@@ -421,5 +422,5 @@ table V_Fact_FB_RevDetail
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

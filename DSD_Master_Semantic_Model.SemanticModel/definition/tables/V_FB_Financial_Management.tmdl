@@ -292,6 +292,7 @@ table V_FB_Financial_Management
 
 	partition V_FB_Financial_Management = m
 		mode: import
+		queryGroup: Fact-Fin
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
@@ -304,5 +305,5 @@ table V_FB_Financial_Management
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

@@ -11,6 +11,7 @@ table V_Dim_FB_NationalChain
 
 	partition V_Dim_FB_NationalChain = m
 		mode: import
+		queryGroup: Dimensions
 		source =
 				let
 				    Source = V_Dim_FB_CustChainHeir,

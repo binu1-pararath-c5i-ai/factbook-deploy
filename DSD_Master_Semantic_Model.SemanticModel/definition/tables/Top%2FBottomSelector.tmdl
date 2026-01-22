@@ -183,6 +183,7 @@ table Top/BottomSelector
 
 	partition Top/BottomSelector = m
 		mode: import
+		queryGroup: UI
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCskvUNJRMjQAEUqxOtFKTvklJfm5MDEjpdhYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Top/Bottom" = _t, Rank = _t, Sort = _t]),
@@ -191,4 +192,6 @@ table Top/BottomSelector
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

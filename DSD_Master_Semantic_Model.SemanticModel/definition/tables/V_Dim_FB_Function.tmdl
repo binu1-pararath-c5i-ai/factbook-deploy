@@ -19,6 +19,7 @@ table V_Dim_FB_Function
 
 	partition V_Dim_FB_Function = m
 		mode: import
+		queryGroup: Dimensions
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),

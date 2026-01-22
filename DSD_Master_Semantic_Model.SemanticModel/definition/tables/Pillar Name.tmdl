@@ -11,6 +11,7 @@ table 'Pillar Name'
 
 	partition 'Pillar Name' = m
 		mode: import
+		queryGroup: UI
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WcsvMS8xLzkzMUfBNzEtMT81NzStRUIrViVYKyS/IycxLVXDMS8ypLMlMLgaLeuYBFRZlp5YouFakJpeWZObngcX9C1KLEkE8JHPAEsElicnZCkGJedlKsbEA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Pillars = _t]),

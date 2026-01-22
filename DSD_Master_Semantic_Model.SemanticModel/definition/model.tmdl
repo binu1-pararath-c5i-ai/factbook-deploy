@@ -7,7 +7,39 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["V_Dim_FB_CalDay","V_Dim_FB_Function","V_Dim_FB_Opex","V_Dim_FB_PlHier","V_Dim_FB_PL_SalesHier","V_FB_Financial_Management","Pillar Name","Metric Table","Abs/RPC Table","V_Dim_FB_Company","V_Dim_FB_ProdHeir","V_Dim_FB_SalesHier","V_Dim_FB_CustChainHeir","SalesStatus","V_Fact_FB_ToplineActuals_Summary","Snowflake Server","Snowflake Warehouse","V_FACT_FB_OPS_BSO","V_FACT_FB_OPS_ROLLEDSTOP","V_FACT_FB_OPS_CFR","V_Fact_FB_Ops_CPH_CPC","Act/VolAdj Table","Whse/Delv/Mech Table","V_Fact_FB_Topline_Budget_All","Snowflake_DataBase","Snowflake_Schema","V_Dim_RouteSalesCustHeir","V_Fact_FB_CMAComplianceSummary","Top/BottomSelector","V_Fact_FB_POGVoidDetail","V_Fact_FB_RevDetail","V_Dim_FB_RptBranchHier","V_FACT_FB_OPS_ROLLEDSTOPORDERS","Rev_Table Header","CMA_Category_Selector","Distinct_SalesID","V_Fact_FB_Ops_Deliveryorder","V_FB_MerchByEmployeeCustomer","Last Refresh as of","V_Dim_FB_Ref","Range_Start","Range_End","V_Dim_FB_NationalChain"]
+queryGroup Parameters
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Dimensions
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup Fact-Fin
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup Fact-Ops
+
+	annotation PBI_QueryGroupOrder = 3
+
+queryGroup Fact-IM
+
+	annotation PBI_QueryGroupOrder = 4
+
+queryGroup Fact-Sales
+
+	annotation PBI_QueryGroupOrder = 5
+
+queryGroup Fact-Labor
+
+	annotation PBI_QueryGroupOrder = 6
+
+queryGroup UI
+
+	annotation PBI_QueryGroupOrder = 7
+
+annotation PBI_QueryOrder = ["V_Dim_FB_Ref","V_Dim_FB_CalDay","V_Dim_FB_Function","V_Dim_FB_Opex","V_Dim_FB_PlHier","V_FB_Financial_Management","V_FACT_FB_OPS_BSO","Pillar Name","Metric Table","Abs/RPC Table","Whse/Delv/Mech Table","Act/VolAdj Table","Rev_Table Header","CMA_Category_Selector","Top/BottomSelector","SalesStatus","V_Fact_FB_ToplineActuals_Summary","V_Fact_FB_Topline_Budget_All","Snowflake Server","Snowflake Warehouse","V_FACT_FB_OPS_CFR","V_FACT_FB_OPS_ROLLEDSTOP","V_FACT_FB_OPS_ROLLEDSTOPORDERS","Snowflake_DataBase","Snowflake_Schema","V_Fact_FB_CMAComplianceSummary","V_Fact_FB_POGVoidDetail","V_Fact_FB_RevDetail","Distinct_SalesID","V_Fact_FB_Ops_Deliveryorder","V_FB_MerchByEmployeeCustomer","V_Fact_FB_Ops_CPH_CPC","Last Refresh as of","Range_Start","Range_End","V_Dim_FB_NationalChain","V_Dim_FB_Company","V_Dim_FB_PL_SalesHier","V_Dim_FB_ProdHeir","V_Dim_FB_SalesHier","V_Dim_FB_CustChainHeir","V_Dim_FB_RptBranchHier","V_Dim_RouteSalesCustHeir"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 

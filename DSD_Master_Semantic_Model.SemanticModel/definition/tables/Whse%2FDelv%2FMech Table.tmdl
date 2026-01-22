@@ -23,6 +23,7 @@ table 'Whse/Delv/Mech Table'
 
 	partition 'Whse/Delv/Mech Table' = m
 		mode: import
+		queryGroup: UI
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCk8sSs3ILy1OVdJRMlSK1YlWcknNySxLLaoEChiBBXxTi5IzEvNSMosz89KBosZKsbEA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Whse/Delv/Mech" = _t, Sort = _t]),

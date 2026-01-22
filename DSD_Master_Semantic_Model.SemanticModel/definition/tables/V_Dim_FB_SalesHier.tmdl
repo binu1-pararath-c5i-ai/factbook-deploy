@@ -128,6 +128,7 @@ table V_Dim_FB_SalesHier
 
 	partition V_Dim_FB_SalesHier = m
 		mode: import
+		queryGroup: Dimensions
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
@@ -139,5 +140,5 @@ table V_Dim_FB_SalesHier
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

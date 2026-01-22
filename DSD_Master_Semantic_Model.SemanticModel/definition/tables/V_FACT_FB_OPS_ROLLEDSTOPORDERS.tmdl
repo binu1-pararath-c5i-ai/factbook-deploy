@@ -81,6 +81,7 @@ table V_FACT_FB_OPS_ROLLEDSTOPORDERS
 
 	partition V_FACT_FB_OPS_ROLLEDSTOPORDERS = m
 		mode: import
+		queryGroup: Fact-Ops
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),

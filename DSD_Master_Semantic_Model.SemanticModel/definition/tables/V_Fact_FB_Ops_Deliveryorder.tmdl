@@ -81,6 +81,7 @@ table V_Fact_FB_Ops_Deliveryorder
 
 	partition V_Fact_FB_Ops_Deliveryorder = m
 		mode: import
+		queryGroup: Fact-Labor
 		source =
 				let
 				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
