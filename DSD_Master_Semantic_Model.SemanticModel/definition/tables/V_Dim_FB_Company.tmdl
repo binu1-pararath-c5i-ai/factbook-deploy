@@ -31,5 +31,5 @@ table V_Dim_FB_Company
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

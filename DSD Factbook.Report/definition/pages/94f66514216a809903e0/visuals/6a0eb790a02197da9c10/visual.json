@@ -232,5 +232,61 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "27e78c720aa18d474a31"
+  "parentGroupName": "27e78c720aa18d474a31",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f10ce02038a061926130",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_RouteSalesCustHeir"
+              }
+            },
+            "Property": "DSSName"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_Dim_RouteSalesCustHeir",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "v"
+                            }
+                          },
+                          "Property": "DSSName"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

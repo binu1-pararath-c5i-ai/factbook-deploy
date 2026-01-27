@@ -1,86 +1,80 @@
 table Top/BottomSelector
 	lineageTag: e82b751d-7516-4021-9e7f-bd90ef4df874
 
-	measure %Sold_Rank = ```
+	measure %Sold_Rank =
 			
 			VAR SelectedOrder = SELECTEDVALUE('Top/BottomSelector'[Top/Bottom])
 			RETURN
 			IF(ISBLANK([%Sold]),-1,
-			SWITCH(
-			    TRUE(),
-			    
-			    ISINSCOPE('V_Dim_FB_CustChainHeir'[NationalChainName]),
+			    SWITCH(
+			        TRUE(),
+			        ISINSCOPE(V_Dim_FB_CustChainHeir[NationalChainName]),
 			        SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Dim_FB_CustChainHeir'[NationalChainName]),[%Sold], , DESC, Skip),
-			        "Bottom", RANKX(ALL('V_Dim_FB_CustChainHeir'[NationalChainName]),[%Sold], , ASC, DENSE),
-			        BLANK()
-			    ),
-			/*
-			    ISINSCOPE('V_Dim_FB_CustChainHeir'[RegionName]),
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Dim_FB_CustChainHeir[NationalChainName]), [%Sold], , DESC, Skip),
+			            "Bottom", RANKX(ALL(V_Dim_FB_CustChainHeir[NationalChainName]), [%Sold], , ASC, DENSE),
+			            BLANK()
+			        ),
+			        ISINSCOPE('V_Dim_FB_CustChainHeir'[RegionName]),
 			        SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Dim_FB_CustChainHeir'[RegionName]),[%Sold], , DESC, DENSE),
-			        "Bottom", RANKX(ALL('V_Dim_FB_CustChainHeir'[RegionName]),[%Sold], , ASC, DENSE),
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Dim_FB_CustChainHeir[RegionName]), [%Sold], , DESC, DENSE),
+			            "Bottom", RANKX(ALL(V_Dim_FB_CustChainHeir[RegionName]), [%Sold], , ASC, DENSE),
+			            BLANK()
+			        ),
+			        ISINSCOPE('V_Fact_FB_RevDetail'[Priority]),
+			        SWITCH(
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Fact_FB_RevDetail[Key]), [%Sold], , DESC, DENSE),
+			            "Bottom", RANKX(ALL(V_Fact_FB_RevDetail[Key]), [%Sold], , ASC, DENSE),
+			            BLANK()
+			        ),
 			        BLANK()
-			    ),
-			    ISINSCOPE('V_Fact_FB_RevDetail'[Priority]),
-			         SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Fact_FB_RevDetail'[Key]),[%Sold], , DESC, DENSE),
-			        "Bottom", RANKX(ALL('V_Fact_FB_RevDetail'[Key]),[%Sold], , ASC, DENSE),
-			        BLANK()
-			    ),
-			*/       
-			    BLANK()
+			    )
 			)
-			)
-			```
 		formatString: 0
 		lineageTag: 2d153bdd-aa3b-4954-bc03-eb621328acbc
 
-	measure %Built_Rank = ```
+	measure %Built_Rank =
 			
 			VAR SelectedOrder = SELECTEDVALUE('Top/BottomSelector'[Top/Bottom])
 			VAR RankingTable =
-			    FILTER(
-			        ALL('V_Dim_FB_CustChainHeir'[NationalChainName]),
-			        NOT(ISBLANK([%Built])) && [%Built] <> 0
-			    )
+			FILTER(
+			    ALL(V_Dim_FB_CustChainHeir[NationalChainName]),
+			    NOT(ISBLANK([%Built])) && [%Built] <> 0
+			)
 			RETURN
-			IF(ISBLANK([%Built]),-1,
-			SWITCH(
-			    TRUE(),
-			    
-			    ISINSCOPE('V_Dim_FB_CustChainHeir'[NationalChainName]),
-			        SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Dim_FB_CustChainHeir'[NationalChainName]),[%Built], , DESC,Skip),
-			        "Bottom",
-			         IF(ISBLANK([%Built]) || [%Built] = 0,
-			        BLANK(),
-			         RANKX(ALL('V_Dim_FB_CustChainHeir'[NationalChainName]),[%Built], , ASC, Dense)),
+			IF(ISBLANK([%Built]), -1,
+			    SWITCH(
+			        TRUE(),
+			        ISINSCOPE(V_Dim_FB_CustChainHeir[NationalChainName]),
+			            SWITCH(
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Dim_FB_CustChainHeir[NationalChainName]), [%Built], , DESC, Skip),
+			            "Bottom",
+			            IF(ISBLANK([%Built]) || [%Built] = 0,
+			                BLANK(),
+			                RANKX(ALL(V_Dim_FB_CustChainHeir[NationalChainName]), [%Built], , ASC, Dense)
+			            ),
+			            BLANK()
+			        ),
+			        ISINSCOPE(V_Dim_FB_CustChainHeir[RegionName]),
+			            SWITCH(
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Dim_FB_CustChainHeir[RegionName]), [%Built], , DESC, DENSE),
+			            "Bottom", RANKX(ALL(V_Dim_FB_CustChainHeir[RegionName]), [%Built], , ASC, DENSE),
+			            BLANK()
+			        ),
+			        ISINSCOPE('V_Fact_FB_RevDetail'[Priority]),
+			            SWITCH(
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Fact_FB_RevDetail[Key]), [%Built], , DESC, DENSE),
+			            "Bottom", RANKX(ALL(V_Fact_FB_RevDetail[Key]), [%Built], , ASC, DENSE),
+			            BLANK()
+			        ),
 			        BLANK()
-			    ),
-			    ISINSCOPE('V_Dim_FB_CustChainHeir'[RegionName]),
-			        SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Dim_FB_CustChainHeir'[RegionName]),[%Built], , DESC, DENSE),
-			        "Bottom", RANKX(ALL('V_Dim_FB_CustChainHeir'[RegionName]),[%Built], , ASC, DENSE),
-			        BLANK()
-			    ),
-			    ISINSCOPE('V_Fact_FB_RevDetail'[Priority]),
-			         SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Fact_FB_RevDetail'[Key]),[%Built], , DESC, DENSE),
-			        "Bottom", RANKX(ALL('V_Fact_FB_RevDetail'[Key]),[%Built], , ASC, DENSE),
-			        BLANK()
-			    ),
-			       
-			    BLANK()
+			    )
 			)
-			)
-			```
 		formatString: 0
 		lineageTag: c50d3264-faa0-4f7b-8eab-d74665f8f069
 
@@ -88,36 +82,32 @@ table Top/BottomSelector
 			
 			VAR SelectedOrder = SELECTEDVALUE('Top/BottomSelector'[Top/Bottom])
 			RETURN
-			IF(ISBLANK([POG_Comp]),-1,
-			SWITCH(
-			    TRUE(),
-			    
-			    ISINSCOPE('V_Dim_FB_CustChainHeir'[NationalChainName]),
+			IF(ISBLANK([POG_Comp]), -1,
+			    SWITCH(
+			        TRUE(),
+			        ISINSCOPE(V_Dim_FB_CustChainHeir[NationalChainName]),
 			        SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Dim_FB_CustChainHeir'[NationalChainName]),[POG_Comp], , DESC, DENSE),
-			        "Bottom", RANKX(ALL('V_Dim_FB_CustChainHeir'[NationalChainName]),[POG_Comp], , ASC, DENSE),
-			        BLANK()
-			    ),
-			/*    
-			    ISINSCOPE('V_Dim_FB_CustChainHeir'[RegionName]),
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Dim_FB_CustChainHeir[NationalChainName]), [POG_Comp], , DESC, DENSE),
+			            "Bottom", RANKX(ALL('V_Dim_FB_CustChainHeir'[NationalChainName]), [POG_Comp], , ASC, DENSE),
+			            BLANK()
+			        ),
+			        ISINSCOPE(V_Dim_FB_CustChainHeir[RegionName]),
 			        SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Dim_FB_CustChainHeir'[RegionName]),[POG_Comp], , DESC, DENSE),
-			        "Bottom", RANKX(ALL('V_Dim_FB_CustChainHeir'[RegionName]),[POG_Comp], , ASC, DENSE),
-			        BLANK()        
-			    ),
-			    */
-			    ISINSCOPE('V_Dim_FB_ProdHeir'[TradeMarkDesc]),
-			         SWITCH(
-			        SelectedOrder,
-			        "Top", RANKX(ALL('V_Dim_FB_ProdHeir'[TradeMarkDesc]),[POG_Comp], , DESC, DENSE),
-			        "Bottom", RANKX(ALL('V_Dim_FB_ProdHeir'[TradeMarkDesc]),[POG_Comp], , ASC, DENSE),
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Dim_FB_CustChainHeir[RegionName]), [POG_Comp], , DESC, DENSE),
+			            "Bottom", RANKX(ALL(V_Dim_FB_CustChainHeir[RegionName]), [POG_Comp], , ASC, DENSE),
+			            BLANK()        
+			        ),
+			        ISINSCOPE('V_Dim_FB_ProdHeir'[TradeMarkDesc]),
+			        SWITCH(
+			            SelectedOrder,
+			            "Top", RANKX(ALL(V_Dim_FB_ProdHeir[TradeMarkDesc]), [POG_Comp], , DESC, DENSE),
+			            "Bottom", RANKX(ALL(V_Dim_FB_ProdHeir[TradeMarkDesc]), [POG_Comp], , ASC, DENSE),
+			            BLANK()
+			        ),
 			        BLANK()
-			    ),
-			       
-			    BLANK()
-			)
+			    )
 			)
 			```
 		formatString: 0

@@ -310,6 +310,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "0b507d5234c86d3904ee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_ProdHeir"
+              }
+            },
+            "Property": "TradeMarkDesc"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "203a531b614ee26b84b3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "POG_COMP_Rank"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c9c43b63ee910ca06a9a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "POG_Comp"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

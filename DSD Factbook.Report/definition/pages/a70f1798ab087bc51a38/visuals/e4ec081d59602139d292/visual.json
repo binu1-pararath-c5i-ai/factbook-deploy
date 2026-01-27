@@ -122,28 +122,6 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'7 ELEVEN'"
-                  }
-                }
-              ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'7 ELEVEN'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
                     "Value": "'7 ELEVEN NON CORPORATE'"
                   }
                 }

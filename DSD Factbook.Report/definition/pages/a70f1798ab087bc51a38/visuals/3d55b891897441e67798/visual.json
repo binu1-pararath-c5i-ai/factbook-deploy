@@ -32,6 +32,25 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Top/BottomSelector"
+                    }
+                  },
+                  "Property": "%Built_Rank"
+                }
+              },
+              "queryRef": "Top/BottomSelector.%Built_Rank",
+              "nativeQueryRef": "Rank",
+              "displayName": "Rank"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -55,13 +74,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "V_Dim_FB_CustChainHeir"
+                    "Entity": "Top/BottomSelector"
                   }
                 },
-                "Property": "RegionName"
+                "Property": "%Built_Rank"
               }
             },
             "direction": "Ascending"
@@ -233,5 +252,100 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "eb789608d017538600e6"
+  "parentGroupName": "eb789608d017538600e6",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "86ed2b14b200285b70de",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_CustChainHeir"
+              }
+            },
+            "Property": "RegionName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4df9464f83a415e04ca2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "%Built"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "89dd54b983b0d70b5a08",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "%Built_Rank"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4b4dcbbae33eb0bb2e24",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "%Built_Top/Bottom_Filter"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Measure Table",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "%Built_Top/Bottom_Filter"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
 }

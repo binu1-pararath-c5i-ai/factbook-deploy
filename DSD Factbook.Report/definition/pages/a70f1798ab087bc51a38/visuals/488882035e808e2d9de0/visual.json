@@ -196,5 +196,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c2e2db6fe4afc6f703ee"
+  "parentGroupName": "c2e2db6fe4afc6f703ee",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cb320ea0cbda20c607d0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Fact_FB_RevDetail"
+              }
+            },
+            "Property": "DisplayRequirementDesc"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

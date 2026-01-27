@@ -220,5 +220,61 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "b4114af96b84d92eedc6"
+  "parentGroupName": "b4114af96b84d92eedc6",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "04e70737294d6537876c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_ProdHeir"
+              }
+            },
+            "Property": "DSC_NC_Category"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_Dim_FB_ProdHeir",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "v"
+                            }
+                          },
+                          "Property": "DSC_NC_Category"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

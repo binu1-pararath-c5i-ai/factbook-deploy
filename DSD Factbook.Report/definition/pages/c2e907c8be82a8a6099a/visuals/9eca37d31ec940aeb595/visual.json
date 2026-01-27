@@ -94,13 +94,26 @@
               "Operation_Cal_Day.L2"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Operation_Cal_Day"
+                    }
+                  },
+                  "Property": "L2"
+                }
+              }
+            ],
             "isPinned": true
           },
           {
             "queryRefs": [
               "Operation_Cal_Day.L3"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           }
         ],
         "root": {

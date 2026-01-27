@@ -233,23 +233,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "234a0bf235966a31020e",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c8cf6e8edb50055b8460",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measure Table"
-              }
-            },
-            "Property": "Label vs Selected Metric_BSO"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "234a0bf235966a31020e"
 }

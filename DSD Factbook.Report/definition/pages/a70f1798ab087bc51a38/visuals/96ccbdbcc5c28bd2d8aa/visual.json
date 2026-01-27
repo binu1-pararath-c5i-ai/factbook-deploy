@@ -55,16 +55,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "V_Dim_FB_CustChainHeir"
+                    "Entity": "Measure Table"
                   }
                 },
-                "Property": "RegionName"
+                "Property": "CMA_Dynamic_Compliance"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -284,6 +284,34 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "d8bf6c6039c5d34e4e56",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_CustChainHeir"
+              }
+            },
+            "Property": "RegionName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5e8b64f06531155a4a31",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "CMA_Dynamic_Compliance"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

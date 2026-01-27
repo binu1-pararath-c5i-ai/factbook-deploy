@@ -1,0 +1,177 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "957dbd5503a6c6004499",
+  "position": {
+    "x": 1122.5603057081444,
+    "y": 491.57869596369716,
+    "z": 6001,
+    "height": 75.815619775495577,
+    "width": 157.74540243611179
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "V_Dim_FB_ProdHeir"
+                        }
+                      },
+                      "Hierarchy": "Pack Hierarchy"
+                    }
+                  },
+                  "Level": "PackageHierarchyLevel1"
+                }
+              },
+              "queryRef": "V_Dim_FB_ProdHeir.Pack Hierarchy.PackageHierarchyLevel1",
+              "nativeQueryRef": "Pack Hierarchy PackageHierarchyLevel1",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "V_Dim_FB_ProdHeir"
+                        }
+                      },
+                      "Hierarchy": "Pack Hierarchy"
+                    }
+                  },
+                  "Level": "PackageHierarchyLevel2"
+                }
+              },
+              "queryRef": "V_Dim_FB_ProdHeir.Pack Hierarchy.PackageHierarchyLevel2",
+              "nativeQueryRef": "Pack Hierarchy PackageHierarchyLevel2",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "V_Dim_FB_ProdHeir"
+                        }
+                      },
+                      "Hierarchy": "Pack Hierarchy"
+                    }
+                  },
+                  "Level": "PackageHierarchyLevel3"
+                }
+              },
+              "queryRef": "V_Dim_FB_ProdHeir.Pack Hierarchy.PackageHierarchyLevel3",
+              "nativeQueryRef": "Pack Hierarchy PackageHierarchyLevel3",
+              "active": false
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "selectAllCheckboxEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "eb1fe4e0b18271ee003b",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_ProdHeir"
+                  }
+                },
+                "Hierarchy": "Pack Hierarchy"
+              }
+            },
+            "Level": "PackageHierarchyLevel1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4d7278439d0908a855e2",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_ProdHeir"
+                  }
+                },
+                "Hierarchy": "Pack Hierarchy"
+              }
+            },
+            "Level": "PackageHierarchyLevel2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "69d2e823ad8a9501e0cc",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_ProdHeir"
+                  }
+                },
+                "Hierarchy": "Pack Hierarchy"
+              }
+            },
+            "Level": "PackageHierarchyLevel3"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -135,41 +135,41 @@ table V_Dim_FB_ProdHeir
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProductKey
+	column ProdHierKey
 		dataType: double
-		lineageTag: 0baf2314-6a96-4850-b506-33e304defbc3
+		lineageTag: f8a61f69-1ca2-4375-b3f2-d06cb55d64d9
 		summarizeBy: none
-		sourceColumn: ProductKey
+		sourceColumn: ProdHierKey
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column CMAProductKey
-		dataType: string
-		lineageTag: 440607e6-4a8e-4a5f-8e73-3bd7f55f4939
-		summarizeBy: none
-		sourceColumn: CMAProductKey
-
-		annotation SummarizationSetBy = Automatic
-
-	column RevProductKey
-		dataType: string
-		lineageTag: d1f1c73c-905f-4979-bedd-0f19666b662e
-		summarizeBy: none
-		sourceColumn: RevProductKey
-
-		annotation SummarizationSetBy = Automatic
-
-	column IMProductKey
+	column IMProdHierKey
 		dataType: double
-		lineageTag: e23e6227-a1f9-4e94-bd53-594c10a069a3
+		lineageTag: fa5335f8-e74e-47a5-8a05-1372706f109e
 		summarizeBy: count
-		sourceColumn: IMProductKey
+		sourceColumn: IMProdHierKey
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CMAProdHierKey
+		dataType: string
+		lineageTag: e0d0f4d7-fe59-4c20-bffc-ad35fccc8398
+		summarizeBy: none
+		sourceColumn: CMAProdHierKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevProdHierKey
+		dataType: string
+		lineageTag: f9720071-48d1-40e7-b4e7-f92ebc6eeb2e
+		summarizeBy: none
+		sourceColumn: RevProdHierKey
+
+		annotation SummarizationSetBy = Automatic
 
 	hierarchy 'Pack Hierarchy'
 		lineageTag: acbfcd54-dc14-47ab-9df4-2bfbf808b6ef
@@ -206,14 +206,14 @@ table V_Dim_FB_ProdHeir
 		queryGroup: Dimensions
 		source =
 				let
-				    Source = Snowflake.Databases(#"Snowflake Server",#"Snowflake Warehouse",[Implementation="2.0"]),
-				    SOLUTIONS_DEV_Database = Source{[Name=Snowflake_DataBase,Kind="Database"]}[Data],
-				    DSD_Schema = SOLUTIONS_DEV_Database{[Name=Snowflake_Schema,Kind="Schema"]}[Data],
-				    V_Dim_FB_ProdHeir_View = DSD_Schema{[Name="V_Dim_FB_Product",Kind="View"]}[Data]
+				    Source = Snowflake.Databases(#"Snowflake Server", #"Snowflake Warehouse", [Implementation="2.0"]),
+				    SOLUTIONS_DEV_Database = Source{[Name=Snowflake_DataBase, Kind="Database"]}[Data],
+				    DSD_Schema = SOLUTIONS_DEV_Database{[Name=Snowflake_Schema, Kind="Schema"]}[Data],
+				    V_Dim_FB_ProdHeir_View = DSD_Schema{[Name="V_Dim_FB_ProdHeir", Kind="View"]}[Data]
 				in
 				    V_Dim_FB_ProdHeir_View
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

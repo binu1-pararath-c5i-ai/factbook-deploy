@@ -115,7 +115,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops"
+                                  "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
                                 }
                               },
                               "Right": {
@@ -142,7 +142,7 @@
                                       "Entity": "Measure Table"
                                     }
                                   },
-                                  "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops"
+                                  "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
                                 }
                               },
                               "Right": {
@@ -195,7 +195,7 @@
                                     "Entity": "Measure Table"
                                   }
                                 },
-                                "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops"
+                                "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
                               }
                             },
                             "Right": {
@@ -222,7 +222,7 @@
                                     "Entity": "Measure Table"
                                   }
                                 },
-                                "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops"
+                                "Property": "Obsolescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
                               }
                             },
                             "Right": {

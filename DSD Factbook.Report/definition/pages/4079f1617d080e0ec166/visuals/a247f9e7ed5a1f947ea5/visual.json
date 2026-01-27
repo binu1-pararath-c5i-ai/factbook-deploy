@@ -268,7 +268,7 @@
             "Property": "TerritoryName"
           }
         },
-        "type": "Categorical",
+        "type": "Advanced",
         "howCreated": "User",
         "objects": {
           "general": [
@@ -278,6 +278,58 @@
                   "expr": {
                     "Literal": {
                       "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "80d0ef150304b1ed2001",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_RptBranchHier"
+              }
+            },
+            "Property": "TerritoryName"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_Dim_FB_RptBranchHier",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "v"
+                            }
+                          },
+                          "Property": "TerritoryName"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
                     }
                   }
                 }

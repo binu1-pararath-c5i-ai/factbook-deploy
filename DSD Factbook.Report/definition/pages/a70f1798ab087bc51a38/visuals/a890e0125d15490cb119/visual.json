@@ -472,6 +472,34 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "3b3f2a8a68147e41005a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "%Sold_Rank"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4a790056aa5081260d16",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "%Sold"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

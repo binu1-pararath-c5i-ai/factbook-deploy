@@ -89,45 +89,21 @@
                       "Cases": [
                         {
                           "Condition": {
-                            "And": {
+                            "Comparison": {
+                              "ComparisonKind": 1,
                               "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 1,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_BSO_KPI"
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
                                     }
                                   },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
-                                  }
+                                  "Property": "Total_BSO_KPI"
                                 }
                               },
                               "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_BSO_KPI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "99D"
-                                    }
-                                  }
+                                "Literal": {
+                                  "Value": "0D"
                                 }
                               }
                             }
@@ -140,45 +116,21 @@
                         },
                         {
                           "Condition": {
-                            "And": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
                               "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 1,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_BSO_KPI"
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
                                     }
                                   },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "-99D"
-                                    }
-                                  }
+                                  "Property": "Total_BSO_KPI"
                                 }
                               },
                               "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_BSO_KPI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
-                                  }
+                                "Literal": {
+                                  "Value": "0D"
                                 }
                               }
                             }
@@ -217,45 +169,21 @@
                     "Cases": [
                       {
                         "Condition": {
-                          "And": {
+                          "Comparison": {
+                            "ComparisonKind": 1,
                             "Left": {
-                              "Comparison": {
-                                "ComparisonKind": 1,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_BSO_KPI"
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
                                   }
                                 },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "0D"
-                                  }
-                                }
+                                "Property": "Total_BSO_KPI"
                               }
                             },
                             "Right": {
-                              "Comparison": {
-                                "ComparisonKind": 4,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_BSO_KPI"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "100D"
-                                  }
-                                }
+                              "Literal": {
+                                "Value": "0D"
                               }
                             }
                           }
@@ -268,45 +196,21 @@
                       },
                       {
                         "Condition": {
-                          "And": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
                             "Left": {
-                              "Comparison": {
-                                "ComparisonKind": 1,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_BSO_KPI"
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
                                   }
                                 },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "-99D"
-                                  }
-                                }
+                                "Property": "Total_BSO_KPI"
                               }
                             },
                             "Right": {
-                              "Comparison": {
-                                "ComparisonKind": 3,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_BSO_KPI"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "0D"
-                                  }
-                                }
+                              "Literal": {
+                                "Value": "0D"
                               }
                             }
                           }

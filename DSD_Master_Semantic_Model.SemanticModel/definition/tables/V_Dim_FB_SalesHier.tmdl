@@ -140,5 +140,5 @@ table V_Dim_FB_SalesHier
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

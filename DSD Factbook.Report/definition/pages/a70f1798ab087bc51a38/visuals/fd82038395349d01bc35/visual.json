@@ -352,6 +352,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "c11c3bd19508d0a31e20",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_CustChainHeir"
+              }
+            },
+            "Property": "NationalChainName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7f015878067c3420b983",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "POG_COMP_Rank"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "03def8c2930738d3b8e7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "POG_Comp"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -64,7 +64,7 @@
                 "Property": "CMA_Dynamic_Compliance"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -313,6 +313,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "c77822966b2338482d63",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "CMA_Dynamic_Compliance"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

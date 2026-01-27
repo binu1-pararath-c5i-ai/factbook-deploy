@@ -81,6 +81,72 @@
         },
         {
           "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 1,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
+                                    }
+                                  },
+                                  "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#9B1D1E'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
+                                    }
+                                  },
+                                  "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#348939'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
             "icon": {
               "kind": "Icon",
               "layout": {
@@ -103,96 +169,21 @@
                     "Cases": [
                       {
                         "Condition": {
-                          "And": {
+                          "Comparison": {
+                            "ComparisonKind": 1,
                             "Left": {
-                              "Comparison": {
-                                "ComparisonKind": 1,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops"
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
                                   }
                                 },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "-99D"
-                                  }
-                                }
+                                "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
                               }
                             },
                             "Right": {
-                              "Comparison": {
-                                "ComparisonKind": 3,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "0D"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "Value": {
-                          "Literal": {
-                            "Value": "'GreenArrowDown'"
-                          }
-                        }
-                      },
-                      {
-                        "Condition": {
-                          "And": {
-                            "Left": {
-                              "Comparison": {
-                                "ComparisonKind": 1,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "0D"
-                                  }
-                                }
-                              }
-                            },
-                            "Right": {
-                              "Comparison": {
-                                "ComparisonKind": 3,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "99D"
-                                  }
-                                }
+                              "Literal": {
+                                "Value": "0D"
                               }
                             }
                           }
@@ -202,122 +193,35 @@
                             "Value": "'RedArrowUp'"
                           }
                         }
-                      }
-                    ]
-                  }
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "And": {
-                              "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 1,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
                                   }
-                                }
-                              },
-                              "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "99D"
-                                    }
-                                  }
-                                }
+                                },
+                                "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
                               }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#9B1D1E'"
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
                             }
                           }
                         },
-                        {
-                          "Condition": {
-                            "And": {
-                              "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 1,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "-99D"
-                                    }
-                                  }
-                                }
-                              },
-                              "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shrinklescence_Abs_RPC_Change_vs_YA_Selection_Ops_UI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#348939'"
-                            }
+                        "Value": {
+                          "Literal": {
+                            "Value": "'GreenArrowDown'"
                           }
                         }
-                      ]
-                    }
+                      }
+                    ]
                   }
                 }
               }

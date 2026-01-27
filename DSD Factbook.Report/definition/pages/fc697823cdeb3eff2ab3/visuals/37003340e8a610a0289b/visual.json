@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "37003340e8a610a0289b",
   "position": {
-    "x": 637.90971005012773,
-    "y": 54.444376704093209,
+    "x": 641.61922833649589,
+    "y": 52.624920936116382,
     "z": 51000,
-    "height": 42,
-    "width": 145.3125,
+    "height": 42.504743833017073,
+    "width": 145.73055028462997,
     "tabOrder": 46000
   },
   "visual": {
@@ -17,17 +17,22 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "V_Dim_FB_CustChainHeir"
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "V_Dim_FB_CustChainHeir"
+                        }
+                      },
+                      "Hierarchy": "Topline Hierarchy"
                     }
                   },
-                  "Property": "TerritoryName"
+                  "Level": "TerritoryName"
                 }
               },
-              "queryRef": "V_Dim_FB_CustChainHeir.TerritoryName",
-              "nativeQueryRef": "TerritoryName1",
+              "queryRef": "V_Dim_FB_CustChainHeir.Topline Hierarchy.TerritoryName",
+              "nativeQueryRef": "Topline Hierarchy TerritoryName",
               "active": true
             }
           ]
@@ -267,5 +272,71 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "dc57bff42107d3edc647",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_CustChainHeir"
+                  }
+                },
+                "Hierarchy": "Topline Hierarchy"
+              }
+            },
+            "Level": "TerritoryName"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_Dim_FB_CustChainHeir",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "HierarchyLevel": {
+                          "Expression": {
+                            "Hierarchy": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "v"
+                                }
+                              },
+                              "Hierarchy": "Topline Hierarchy"
+                            }
+                          },
+                          "Level": "TerritoryName"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

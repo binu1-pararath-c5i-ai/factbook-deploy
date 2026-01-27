@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "V_Dim_FB_CustChainHeir"
+                      "Entity": "V_Dim_FB_NationalChain"
                     }
                   },
                   "Property": "NationalChainName"
                 }
               },
-              "queryRef": "V_Dim_FB_CustChainHeir.NationalChainName",
-              "nativeQueryRef": "NationalChainName",
+              "queryRef": "V_Dim_FB_NationalChain.NationalChainName",
+              "nativeQueryRef": "NationalChainName1",
               "active": true
             }
           ]
@@ -262,5 +262,61 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5f2a258f8a6a900eb502",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_NationalChain"
+              }
+            },
+            "Property": "NationalChainName"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_Dim_FB_NationalChain",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "v"
+                            }
+                          },
+                          "Property": "NationalChainName"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

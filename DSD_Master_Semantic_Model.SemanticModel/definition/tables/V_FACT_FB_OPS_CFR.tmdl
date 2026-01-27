@@ -87,11 +87,11 @@ table V_FACT_FB_OPS_CFR
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProductKey
+	column ProdHierKey
 		dataType: double
-		lineageTag: ddc87a43-901a-44f1-97af-6113c623b7f8
+		lineageTag: 4ec71ac7-9463-4047-a003-56b7e92b51d5
 		summarizeBy: none
-		sourceColumn: ProductKey
+		sourceColumn: ProdHierKey
 
 		annotation SummarizationSetBy = Automatic
 
@@ -112,5 +112,5 @@ table V_FACT_FB_OPS_CFR
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

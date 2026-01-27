@@ -217,6 +217,21 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "91cded1a19b66daa404c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "%Sold_Rank"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
       }
     ]
   },
@@ -235,6 +250,22 @@
               }
             },
             "Property": "Metrics"
+          }
+        }
+      },
+      {
+        "name": "5969d9c700ee32b83041",
+        "boundFilter": "91cded1a19b66daa404c",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "%Sold_Rank"
           }
         }
       }

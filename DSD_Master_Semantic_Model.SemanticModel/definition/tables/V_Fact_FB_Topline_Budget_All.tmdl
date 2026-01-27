@@ -91,11 +91,11 @@ table V_Fact_FB_Topline_Budget_All
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProductKey
+	column ProdHierKey
 		dataType: double
-		lineageTag: 9e08b33f-b0b7-409f-b5a5-9be0a3b9007c
+		lineageTag: ea7f5a9e-6186-44a3-9167-b0e9aec0e910
 		summarizeBy: none
-		sourceColumn: ProductKey
+		sourceColumn: ProdHierKey
 
 		annotation SummarizationSetBy = Automatic
 

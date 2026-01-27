@@ -758,7 +758,7 @@
     {
       "ordinal": 1,
       "scrollPosition": {
-        "x": 0,
+        "x": 137.07091029884009,
         "y": 0
       },
       "nodes": [
@@ -796,10 +796,11 @@
           "nodeIndex": "V_Dim_FB_ProdHeir",
           "nodeLineageTag": "31929968-2fae-440e-8ddf-e22f1005180c",
           "size": {
-            "height": 182.36382751649546,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 1,
+          "expandedHeight": 182.36382751649546
         },
         {
           "location": {
@@ -1009,8 +1010,8 @@
     {
       "ordinal": 3,
       "scrollPosition": {
-        "x": 0,
-        "y": 0
+        "x": 427.56332126079866,
+        "y": 466.69302272592472
       },
       "nodes": [
         {
@@ -1197,7 +1198,7 @@
         }
       ],
       "name": "Ops Management",
-      "zoomValue": 42.202698232275054,
+      "zoomValue": 83.82383990273874,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
@@ -1221,7 +1222,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 7
         },
         {
           "location": {
@@ -1260,7 +1261,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 4
         },
         {
           "location": {
@@ -1273,7 +1274,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 8
         },
         {
           "location": {
@@ -1286,7 +1287,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 5
         },
         {
           "location": {
@@ -1299,7 +1300,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 6
         },
         {
           "location": {
@@ -1524,7 +1525,7 @@
       "ordinal": 7,
       "scrollPosition": {
         "x": 0,
-        "y": 245
+        "y": 0
       },
       "nodes": [
         {
@@ -2563,6 +2564,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "In-Market",
+  "selectedDiagram": "Topline",
   "defaultDiagram": "All tables"
 }

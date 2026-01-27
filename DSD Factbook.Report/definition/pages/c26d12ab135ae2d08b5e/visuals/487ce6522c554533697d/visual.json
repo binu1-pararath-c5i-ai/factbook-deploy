@@ -344,45 +344,21 @@
                       "Cases": [
                         {
                           "Condition": {
-                            "And": {
+                            "Comparison": {
+                              "ComparisonKind": 2,
                               "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_Obso_KPI"
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
                                     }
                                   },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
-                                  }
+                                  "Property": "Total_Obso_KPI"
                                 }
                               },
                               "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_Obso_KPI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "99D"
-                                    }
-                                  }
+                                "Literal": {
+                                  "Value": "0D"
                                 }
                               }
                             }
@@ -395,45 +371,21 @@
                         },
                         {
                           "Condition": {
-                            "And": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
                               "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_Obso_KPI"
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
                                     }
                                   },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "-99D"
-                                    }
-                                  }
+                                  "Property": "Total_Obso_KPI"
                                 }
                               },
                               "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Total_Obso_KPI"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
-                                  }
+                                "Literal": {
+                                  "Value": "0D"
                                 }
                               }
                             }
@@ -472,45 +424,21 @@
                     "Cases": [
                       {
                         "Condition": {
-                          "And": {
+                          "Comparison": {
+                            "ComparisonKind": 1,
                             "Left": {
-                              "Comparison": {
-                                "ComparisonKind": 1,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_Obso_KPI"
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
                                   }
                                 },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "0D"
-                                  }
-                                }
+                                "Property": "Total_Obso_KPI"
                               }
                             },
                             "Right": {
-                              "Comparison": {
-                                "ComparisonKind": 3,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_Obso_KPI"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "99D"
-                                  }
-                                }
+                              "Literal": {
+                                "Value": "0D"
                               }
                             }
                           }
@@ -523,45 +451,21 @@
                       },
                       {
                         "Condition": {
-                          "And": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
                             "Left": {
-                              "Comparison": {
-                                "ComparisonKind": 2,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_Obso_KPI"
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Measure Table"
                                   }
                                 },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "-99D"
-                                  }
-                                }
+                                "Property": "Total_Obso_KPI"
                               }
                             },
                             "Right": {
-                              "Comparison": {
-                                "ComparisonKind": 3,
-                                "Left": {
-                                  "Measure": {
-                                    "Expression": {
-                                      "SourceRef": {
-                                        "Entity": "Measure Table"
-                                      }
-                                    },
-                                    "Property": "Total_Obso_KPI"
-                                  }
-                                },
-                                "Right": {
-                                  "Literal": {
-                                    "Value": "0D"
-                                  }
-                                }
+                              "Literal": {
+                                "Value": "0D"
                               }
                             }
                           }

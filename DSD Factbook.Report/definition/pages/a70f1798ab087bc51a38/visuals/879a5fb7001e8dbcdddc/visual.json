@@ -32,6 +32,25 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Top/BottomSelector"
+                    }
+                  },
+                  "Property": "%Sold_Rank"
+                }
+              },
+              "queryRef": "Top/BottomSelector.%Sold_Rank",
+              "nativeQueryRef": "Rank",
+              "displayName": "Rank"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -55,13 +74,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "V_Fact_FB_RevDetail"
+                    "Entity": "Top/BottomSelector"
                   }
                 },
-                "Property": "Priority"
+                "Property": "%Sold_Rank"
               }
             },
             "direction": "Ascending"
@@ -293,21 +312,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "75b7b0bbfd0a85c3844c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "V_Fact_FB_RevDetail"
-              }
-            },
-            "Property": "Rank"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
         "name": "8cb5016e4307900707da",
         "field": {
           "Column": {
@@ -360,6 +364,97 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "80bf65900949bc4995eb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Fact_FB_RevDetail"
+              }
+            },
+            "Property": "Priority"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0818c2e0d3c265624547",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "%Sold"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3dd5b34473c0a52cbca5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "%Sold_Top/Bottom_Filter"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Measure Table",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "%Sold_Top/Bottom_Filter"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "dfcdd855574ca0da0397",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "%Sold_Rank"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -55,11 +55,11 @@ table V_Fact_FB_ToplineActuals_Summary
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProductKey
+	column ProdHierKey
 		dataType: double
-		lineageTag: 2cb9c125-c129-414f-afe7-2c58cd3a716f
+		lineageTag: 5f68a6a7-25d8-4b6f-9186-52ade41141c9
 		summarizeBy: none
-		sourceColumn: ProductKey
+		sourceColumn: ProdHierKey
 
 		annotation SummarizationSetBy = Automatic
 

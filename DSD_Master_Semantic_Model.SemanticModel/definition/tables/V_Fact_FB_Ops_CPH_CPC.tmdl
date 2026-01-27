@@ -1018,5 +1018,5 @@ table V_Fact_FB_Ops_CPH_CPC
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

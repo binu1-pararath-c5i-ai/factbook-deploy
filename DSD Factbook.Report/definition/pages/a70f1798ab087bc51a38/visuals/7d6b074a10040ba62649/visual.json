@@ -303,6 +303,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "f9de2ca99057a0951c84",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "V_Dim_FB_CustChainHeir"
+              }
+            },
+            "Property": "NationalChainName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b01f3f638050bd40187e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Top/BottomSelector"
+              }
+            },
+            "Property": "%Built_Rank"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9c73ec2107a904bcc10a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "%Built"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

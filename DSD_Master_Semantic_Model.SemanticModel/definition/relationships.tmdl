@@ -23,6 +23,7 @@ relationship AutoDetected_ab3b01fd-4d36-4990-b6d7-6830173a09c0
 	toColumn: V_Dim_FB_Company.CmpnyCode
 
 relationship a328e7f7-072a-ed26-681b-e88d646cba45
+	isActive: false
 	fromColumn: V_Fact_FB_ToplineActuals_Summary.SalesGroupID
 	toColumn: V_Dim_FB_SalesHier.SalesGroupID
 
@@ -189,6 +190,7 @@ relationship edae93d8-e7b7-e64e-c5ef-d902de68ea22
 	toColumn: V_Dim_FB_CalDay.DayDate
 
 relationship BG_a328e7f7-072a-ed26-681b-e88d646cba45
+	isActive: false
 	fromColumn: V_Fact_FB_Topline_Budget_All.SalesGroupID
 	toColumn: V_Dim_FB_SalesHier.SalesGroupID
 
@@ -205,19 +207,19 @@ relationship 4eab08aa-2bf0-c989-accf-9b450f2b48eb
 	fromColumn: V_Fact_FB_ToplineActuals_Summary.NationalChainName
 	toColumn: V_Dim_FB_NationalChain.NationalChainName
 
-relationship 40a5cd68-c8c0-19c4-28fa-2a4c00b56507
-	fromColumn: V_Fact_FB_ToplineActuals_Summary.ProductKey
-	toColumn: V_Dim_FB_ProdHeir.ProductKey
+relationship f2637d39-e1b5-d7a7-a7b9-ead26564b5b7
+	fromColumn: V_Fact_FB_POGVoidDetail.ProdHierKey
+	toColumn: V_Dim_FB_ProdHeir.ProdHierKey
 
-relationship 601e5578-a0bf-3104-e787-3a553da9e095
-	fromColumn: V_Fact_FB_Topline_Budget_All.ProductKey
-	toColumn: V_Dim_FB_ProdHeir.ProductKey
+relationship 85fbe292-337f-772f-d7c6-a0550e1fb545
+	fromColumn: V_Fact_FB_ToplineActuals_Summary.ProdHierKey
+	toColumn: V_Dim_FB_ProdHeir.ProdHierKey
 
-relationship 02bf6543-e454-87ff-91f1-6dea9129dd35
-	fromColumn: V_Fact_FB_POGVoidDetail.ProductKey
-	toColumn: V_Dim_FB_ProdHeir.ProductKey
+relationship c1d3f0a2-02fa-a489-ee93-8bbb73a623a8
+	fromColumn: V_Fact_FB_Topline_Budget_All.ProdHierKey
+	toColumn: V_Dim_FB_ProdHeir.ProdHierKey
 
-relationship 9394d7c1-fe35-5c7d-adab-610cfe767804
-	fromColumn: V_FACT_FB_OPS_CFR.ProductKey
-	toColumn: V_Dim_FB_ProdHeir.ProductKey
+relationship 2fe7d31c-9756-9c9b-a6f1-8fa953e5c5a7
+	fromColumn: V_FACT_FB_OPS_CFR.ProdHierKey
+	toColumn: V_Dim_FB_ProdHeir.ProdHierKey
 

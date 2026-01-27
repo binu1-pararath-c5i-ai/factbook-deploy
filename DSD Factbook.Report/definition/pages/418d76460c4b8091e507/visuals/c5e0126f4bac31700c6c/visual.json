@@ -17,17 +17,22 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "HierarchyLevel": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "V_Dim_FB_CustChainHeir"
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "V_Dim_FB_CustChainHeir"
+                        }
+                      },
+                      "Hierarchy": "Topline Hierarchy"
                     }
                   },
-                  "Property": "TerritoryName"
+                  "Level": "TerritoryName"
                 }
               },
-              "queryRef": "V_Dim_FB_CustChainHeir.TerritoryName",
-              "nativeQueryRef": "TerritoryName1",
+              "queryRef": "V_Dim_FB_CustChainHeir.Topline Hierarchy.TerritoryName",
+              "nativeQueryRef": "Topline Hierarchy TerritoryName",
               "active": true
             }
           ]
@@ -267,5 +272,71 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "77b97c4c0d4032b6b84d",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "V_Dim_FB_CustChainHeir"
+                  }
+                },
+                "Hierarchy": "Topline Hierarchy"
+              }
+            },
+            "Level": "TerritoryName"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "v",
+              "Entity": "V_Dim_FB_CustChainHeir",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "HierarchyLevel": {
+                          "Expression": {
+                            "Hierarchy": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "v"
+                                }
+                              },
+                              "Hierarchy": "Topline Hierarchy"
+                            }
+                          },
+                          "Level": "TerritoryName"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

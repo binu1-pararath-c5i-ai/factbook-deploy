@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "18f9c0f3b5d4a2b6a5ce",
   "position": {
-    "x": 0,
-    "y": 34.946562747934848,
+    "x": 2.8763725959958233,
+    "y": 36.6354384590453,
     "z": 4250,
-    "height": 362.90661315163112,
-    "width": 1297.0551173752742,
+    "height": 362.06961905363573,
+    "width": 1293.6256238549497,
     "tabOrder": 4000
   },
   "visual": {
@@ -272,19 +272,45 @@
               "V_Dim_FB_CustChainHeir.Topline Hierarchy.TerritoryName"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_Dim_FB_CustChainHeir"
+                    }
+                  },
+                  "Property": "TerritoryName"
+                }
+              }
+            ],
             "isPinned": true
           },
           {
             "queryRefs": [
               "V_Dim_FB_CustChainHeir.Topline Hierarchy.BranchName"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "V_Dim_FB_CustChainHeir"
+                    }
+                  },
+                  "Property": "BranchName"
+                }
+              }
+            ],
+            "isPinned": true
           },
           {
             "queryRefs": [
               "V_Dim_FB_CustChainHeir.Topline Hierarchy.SalesGroupName"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           }
         ],
         "root": {
@@ -762,7 +788,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "169.33332347623562D"
+                  "Value": "173.37426240467997D"
                 }
               }
             }
@@ -776,7 +802,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "167.66661524514095D"
+                  "Value": "161.5504930170319D"
                 }
               }
             }
@@ -790,7 +816,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "161.1425652561369D"
+                  "Value": "161.15276256806695D"
                 }
               }
             }

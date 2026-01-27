@@ -216,16 +216,6 @@ table V_Fact_FB_POGVoidDetail
 
 		annotation SummarizationSetBy = Automatic
 
-	column ProductKey
-		dataType: double
-		lineageTag: 0ec45c8e-aff4-44e0-9229-e78bd28e348c
-		summarizeBy: none
-		sourceColumn: ProductKey
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ItemDesc
 		dataType: string
 		lineageTag: ebc4fa1c-f2f4-4a73-8300-309e85eff088
@@ -233,6 +223,16 @@ table V_Fact_FB_POGVoidDetail
 		sourceColumn: ItemDesc
 
 		annotation SummarizationSetBy = Automatic
+
+	column ProdHierKey
+		dataType: double
+		lineageTag: 1e1a3440-905e-474d-b2a7-c7dba9a52510
+		summarizeBy: none
+		sourceColumn: ProdHierKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition V_Fact_FB_POGVoidDetail = m
 		mode: import
@@ -249,5 +249,5 @@ table V_Fact_FB_POGVoidDetail
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 
