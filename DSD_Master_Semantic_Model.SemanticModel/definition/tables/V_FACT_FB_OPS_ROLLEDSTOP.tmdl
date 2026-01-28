@@ -1,5 +1,4 @@
 table V_FACT_FB_OPS_ROLLEDSTOP
-	excludeFromModelRefresh
 	lineageTag: f2dcef57-8b1f-424b-8838-645778c57a07
 
 	measure 'Damages Cases' = SUM([DAMAGES_CASES])
