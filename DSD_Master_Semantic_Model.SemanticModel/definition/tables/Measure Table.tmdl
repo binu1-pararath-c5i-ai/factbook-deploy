@@ -3907,16 +3907,12 @@ table 'Measure Table'
 	measure Rate_Per_Case_Attainment_to_AOP_TL =
 			
 			IF(
-			    ISFILTERED(V_Dim_FB_CustChainHeir[NationalChainName]),
-			    "",
-			    IF(
-			        ISBLANK([Rate_per_Case_TL]),
-			        BLANK(),
-			        DIVIDE(
-			            [Rate_per_Case_TL],
-			            [Rate_Per_Case_AOP_TL KPICard]
-			        ) - 1
-			    )
+			    ISBLANK([Rate_per_Case_TL]),
+			    BLANK(),
+			    DIVIDE(
+			        [Rate_per_Case_TL],
+			        [Rate_Per_Case_AOP_TL KPICard]
+			    ) - 1
 			)
 		displayFolder: Topline
 		lineageTag: 6e44f650-2ad9-4007-918f-006a3c7cb60e
