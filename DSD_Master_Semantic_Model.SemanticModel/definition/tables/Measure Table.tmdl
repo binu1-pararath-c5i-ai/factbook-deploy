@@ -8558,7 +8558,7 @@ table 'Measure Table'
 			(
 			   ( [Breakage_Abs_RPC_Selection_OPs]- [Breakage_Abs_RPC_Selection_Py_OPs]), [Breakage_Abs_RPC_Selection_Py_OPs]
 			)
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: #,##0%;(#,##0%)
 		displayFolder: Ops
 		lineageTag: 39fffcbf-57be-4a44-84e1-4d3f965c1512
 
