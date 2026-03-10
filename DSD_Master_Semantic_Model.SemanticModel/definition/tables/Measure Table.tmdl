@@ -7145,7 +7145,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure '%Sold in' = Divide (Calculate(Sum(V_Fact_FB_RevDetail[Soldin_Accum])), Calculate(Sum(V_Fact_FB_RevDetail[StoreCnt])))
+	measure '%Sold in' = DIVIDE(SUM(V_Fact_FB_RevDetail[Soldin_Accum]), SUM(V_Fact_FB_RevDetail[StoreCnt]))
 		formatString: 0%;-0%;0%
 		displayFolder: Rev
 		lineageTag: 2216a783-7dca-46b3-9c7c-7fde7b2928f3
@@ -7211,9 +7211,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure %Sold =
-			// This dax will calculate the YTD, QYD, MTD CMA based on the date slicer selected.
-			AVERAGEX(VALUES(V_Fact_FB_RevDetail[MonthStart]), [%Sold_Base_Calc])
+	measure %Sold = [%Sold_Base_Calc]
 		formatString: 0%;-0%;0%
 		displayFolder: Rev
 		lineageTag: 5129880f-6fe4-4324-9c5e-0796526dd405
@@ -10747,16 +10745,14 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure %Sold_Base_Calc = ```
+	measure %Sold_Base_Calc =
 			
-			 
-			 DIVIDE(
-			CALCULATE(SUM(V_Fact_FB_RevDetail[SoldIn_Accum])),
-			CALCULATE(COUNT(V_Fact_FB_RevDetail[PromotionID]),
-			Not V_Fact_FB_RevDetail[RefusalReason_new] in {"Product not authorized","Per Store Manager, not mandated HQ display"}
+			DIVIDE(
+			    SUM(V_Fact_FB_RevDetail[SoldIn_Accum]),
+			    CALCULATE(SUM(V_Fact_FB_RevDetail[StoreCnt]),
+			        NOT V_Fact_FB_RevDetail[RefusalReason_new] IN {"Product not authorized", "Per Store Manager, not mandated HQ display"}
+			    )
 			)
-			)
-			```
 		formatString: #,##0%;(#,##0%)
 		displayFolder: Rev
 		lineageTag: e64867a7-aac9-42d8-ab9e-8ef9f1371ae8
@@ -10765,10 +10761,12 @@ table 'Measure Table'
 
 	measure %Built_Base_Calc =
 			CALCULATE(
-			DIVIDE([Built_Soldin_Accum],
-			        CALCULATE(SUM(V_Fact_FB_RevDetail[SoldIn_Accum]),
-			        V_Fact_FB_RevDetail[BuildStatusID]<>-1)),
-			        V_Dim_FB_CustChainHeir[StoreFormat]="LF")
+			    DIVIDE(
+			        [Built_Soldin_Accum],
+			        CALCULATE(SUM(V_Fact_FB_RevDetail[SoldIn_Accum]), V_Fact_FB_RevDetail[BuildStatusID] <> -1)
+			    ),
+			    V_Dim_FB_CustChainHeir[StoreFormat] = "LF"
+			)
 		formatString: #,##0%;(#,##0%)
 		displayFolder: Rev
 		lineageTag: 6e5889cb-a921-45ae-88e9-a37fdef67f3e

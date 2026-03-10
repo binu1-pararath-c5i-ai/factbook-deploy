@@ -57,7 +57,7 @@
               },
               "queryRef": "Operation_Cal_Day.L31",
               "nativeQueryRef": "L31",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -142,7 +142,6 @@
                   }
                 }
               ],
-              "isToggled": true,
               "children": [
                 {
                   "identityValues": [
@@ -247,7 +246,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'2025'"
+                                "Value": "'2026'"
                               }
                             }
                           ]
@@ -275,7 +274,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'2025'"
+                                      "Value": "'2026'"
                                     }
                                   }
                                 ]
@@ -299,7 +298,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "2025"
+                            "0": "2026"
                           }
                         ]
                       }
